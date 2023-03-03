@@ -4,7 +4,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 
 # Day 1 of #Network security and Database vulnerabilities 
 ## Introduction to TCP/IP 
- Today I learned  about TCP/IP protocal as well as model, how was it  developed and its different layers used in network communication communication.
+ Today I learned  about TCP/IP protocol as well as model, how was it  developed and its different layers used in network communication communication.
  
 ### TCP/IP
 TCP/IP stands for Transmission Control Protocol/Internet Protocol and is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP is also used as a communications protocol in a private computer network (an intranet or extranet).
