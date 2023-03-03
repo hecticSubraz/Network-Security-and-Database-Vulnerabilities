@@ -17,6 +17,7 @@ TCP/IP stands for Transmission Control Protocol/Internet Protocol and is a suite
 
 ### TCP/IP model and its layers
 There are four layers of the TCP/IP model: network access, internet, transport, and application. Used together, these layers are a suite of protocols. The TCP/IP model passes data through these layers in a particular order when a user sends information, and then again in reverse order when the data is received.
+
 ![TCP/IP model](https://www.guru99.com/images/1/093019_0615_TCPIPModelW1.png)
 #### Network Access layer(Layer 1):
 * It is a group of applications requiring network communications
