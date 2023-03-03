@@ -2,7 +2,7 @@
 # 30 days of Network security and Database vulnerabilities
 I will be learning Network security and Database vulnerabilities for 30 days and I will be updating daily about my progress and understanding.
 
-# Day 1
+# Day 1 of #Network security and Database vulnerabilities 
 ## Introduction to TCP/IP 
  Today I learned  about TCP/IP protocal as well as model,how was it  developed and its different layers used in network communication communication.
  
@@ -33,3 +33,5 @@ There are four layers of the TCP/IP model: network access, internet, transport, 
 #### Application layer( Layer 5):
 * responsible for end-to-end communication and error-free delivery of data
 * shields the upper-layer applications from the complexities of data
+
+
