@@ -1,5 +1,3 @@
-# Network-Security-and-Database-Vulnerabilities
-I will be learning and updating documentation consistently on Network Security and Database Vulnerabilities
 
 # 30 days of Network security and Database vulnerabilities
 I will be learning Network security and Database vulnerabilities for 30 days and I will be updating daily about my progress and understanding.
