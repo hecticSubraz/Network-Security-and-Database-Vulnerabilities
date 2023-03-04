@@ -123,6 +123,15 @@ Network cables are used as a connection medium between different computers and o
 * every node in the network connection is directly connected to one other forming overlapping connections between the nodes.
 * delivers better fault tolerance because if any network device fails, it won't affect the network, as other devices can transfer information
 * Mesh networks self-configure and self-organize, finding the quickest, most secure way to transmit the data
+## Network security
+Network Security involves access control, virus and antivirus software, application security, network analytics, types of network-related security (endpoint, web, wireless), firewalls, VPN encryption and more
+
+### Types of Network security
+### Firewall
+Firewalls control incoming and outgoing traffic on networks, with predetermined security rules. Firewalls keep out unfriendly traffic and is a necessary part of daily computing. Network Security relies heavily on Firewalls, and especially Next Generation Firewalls, which focus on blocking malware and application-layer attacks.
+
+### Network Segmentation
+Network segmentation defines boundaries between network segments where assets within the group have a common function, risk or role within an organization. For instance, the perimeter gateway segments a company network from the Internet. Potential threats outside the network are prevented, ensuring that an organization’s sensitive data remains inside. Organizations can go further by defining additional internal boundaries within their network, which can provide improved security and access control.
 
 
 
