@@ -209,6 +209,7 @@ Each of the three layers, 2, 3, and 4, of the TCP/IP protocol stack model produc
 
    ### IP Addressing Scheme:
    The IP header has 32 bits assigned for addressing a desired device on the network. An IP address is a unique identifier used to locate a device on the IP network. To make the system scalable, the address structure is subdivided into the network ID and the host ID. The network ID identifies the network the device belongs to; the host ID identifies the device. This implies that all devices belonging to the same network have a single network ID. Based on the bit positioning assigned to the network ID and the host ID, the IP address is further subdivided into classes A, B, C, D (multicast), and E (reserved) as shown in figure below.
+   
    ![Classes of IP Address](https://ptgmedia.pearsoncmg.com/images/chap1_9780133814743/elementLinks/01fig13.jpg)
 
 * Class A starts with 0 followed by 7 bits of network ID and 24 bits of host ID.
