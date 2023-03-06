@@ -2,7 +2,12 @@
 # 30 days of Network security and Database vulnerabilities
 I will be learning Network security and Database vulnerabilities for 30 days and I will be updating daily about my progress and understanding.
 
-# Day 1 of #Network security and Database vulnerabilities 
+- [Day 1](#Day-1)
+- [Day 2](#Day-2)
+- [Day 3](#Day-3)
+- [Day 4](#Day-4)
+
+# Day 1
 ## Introduction to TCP/IP 
  Today I learned  about TCP/IP protocol as well as model, how was it  developed and its different layers used in network communication communication.
  
@@ -36,7 +41,7 @@ There are four layers of the TCP/IP model: network access, internet, transport, 
 * responsible for end-to-end communication and error-free delivery of data
 * shields the upper-layer applications from the complexities of data
 
-# Day 2 of #Network security and Database vulnerabilities 
+# Day 2 
 ## Networking fundamentals and its security
  Today I learned  about networking fundamentals and  basic concepts of network security 
  
@@ -133,7 +138,7 @@ Firewalls control incoming and outgoing traffic on networks, with predetermined 
 ### Network Segmentation
 Network segmentation defines boundaries between network segments where assets within the group have a common function, risk or role within an organization. For instance, the perimeter gateway segments a company network from the Internet. Potential threats outside the network are prevented, ensuring that an organization’s sensitive data remains inside. Organizations can go further by defining additional internal boundaries within their network, which can provide improved security and access control.
 
-# Day 3 of #Network security and Database vulnerabilities 
+# Day 3
 ## Inspection and Firewall Filters
  Today I learned  about basic of types of inspection in the packets and general knowledge of firewall filters and its difference 
  
@@ -155,7 +160,7 @@ An intrusion prevention system (IPS) is a network security tool (which can be a 
 ### Difference betwen IDS and IPS are as follows
 The  difference between Intrusion Detection system and intrusion Prevention System (IDS/IPS) technology in computer network is  IDS are out of band in system, means it cannot sit within the network path but IPS are in-line in the system, means it can pass through in between the devices.IDS generates only alerts if anomaly traffic passes in network traffic, it would be false positive or false negative, means IDS detects only malicious activities but no action taken on those activities but IPS has feature of detection and prevention with auto or manual action taken on those detected malicious activities like drop or block or terminate the connections. Here IDS and IPS systems stability, performance and accuracy wise result.
 
-# Day 4 of #Network security and Database vulnerabilities 
+# Day 4
 ## Ethernet and LAN-Ethernet operations
  Today I learned  about working principle of Ethernet networks, collision domain and  Broadcast domain,Network Segmentation and its working principle,Virtual LAN and its working principle and  addressing scheme and IP scheme in modern networks.
  
