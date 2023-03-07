@@ -228,7 +228,7 @@ Each of the three layers, 2, 3, and 4, of the TCP/IP protocol stack model produc
 ## Address Resolution Protocol(ARP) and MAC address Spoofing
  Today I learned  about Address Resolution protocol(ARP) ad MAC Address spoofing.
 
- ## Address Resolution Protocal(ARP)
+ ## Address Resolution Protocol(ARP)
  Address Resolution Protocol (ARP) is a procedure for mapping a dynamic IP address to a permanent physical machine address in a local area network (LAN). The physical machine address is also known as a media access control (MAC) address.
 
 The job of ARP is essentially to translate 32-bit addresses to 48-bit addresses and vice versa. This is necessary because IP addresses in IP version 4 (IPv4) are 32 bits, but MAC addresses are 48 bits.
