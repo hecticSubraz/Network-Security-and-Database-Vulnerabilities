@@ -7,6 +7,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 3](#Day-3)
 - [Day 4](#Day-4)
 - [Day 5](#Day-5)
+- [Day 6](#Day-6)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -344,6 +345,62 @@ There are many risks associated with not taking steps to prevent session hijacki
 MAC Spoofing is a type of attack used to exploit flaws in the authentication mechanism implemented by wired and wireless networking hardware. This can be accomplished through a variety of means, such as modifying the hardware itself with an inline switch to forward messages from one MAC address to another, spoofing the identity of that device by forwarding messages from an innocent bystander’s device (a “spoofing victim”), tampering with messages sent from legitimate access points, or capturing packets that contain response data that is ultimately manipulated before it reaches its destination
 MAC spoofing is most commonly known as the method of attack used in Wireless Network Hacking. MAC spoofing is commonly used to break into wireless networks and steal wireless network credentials. It can also be used to install an unauthorized access point or simulate an access point with a packet sniffer from within the same operating system and without being on the same network segment.
 A commonly known attack method is the use of an unauthorized access point to capture user credentials. If a user, for instance, decides to share a network resource with another user and does not know that it has been compromised in some way, then this is an example of how a MAC spoofing attack can be used to make it difficult for the non-malicious party to log on and share resources over that network. All they need to do is create an unauthorized access point of their own with the same MAC address as that of another’s. When that client tries to log in, the unauthorized access point will redirect the authentication query from the user’s device and vice versa. 
+
+# Day 6  
+## Router and Routing Tables in Computer Network
+ Today I learned about Router,Routing tables,Entries of IP routing table and use of routing table entries in computer Network.
+
+## Routers:
+A Router is a networking device that forwards data packets between computer network. This device is usually connected to two or more different networks. When a data packet comes to a router port, the router reads address information in packet to determine out which port the packet will be sent. For example, a router provides you with the internet access by connecting your LAN with the Internet.
+
+When a packet arrives at a Router, it examines destination IP address of a received packet and make routing decisions accordingly. Routers use Routing Tables to determine out which interface the packet will be sent. A routing table lists all networks for which routes are known. Each router’s routing table is unique and stored in the RAM of the device.
+
+### Routing Table:
+A routing table is a set of rules, often viewed in table format, that is used to determine where data packets traveling over an Internet Protocol (IP) network will be directed. All IP-enabled devices, including routers and switches, use routing tables. See below a Routing Table:
+
+ The entry corresponding to the default gateway configuration is a network destination of 0.0.0.0 with a network mask (netmask) of 0.0.0.0. The Subnet Mask of default route is always 0.0.0.0 
+
+### Sample of routing table is 
+![Routing table](https://geek-university.com/wp-content/images/ccna/route_print_windows.jpg)
+
+### Entries of an IP Routing Table:
+A routing table contains the information necessary to forward a packet along the best path toward its destination. Each packet contains information about its origin and destination. Routing Table provides the device with instructions for sending the packet to the next hop on its route across the network.
+
+Each entry in the routing table consists of the following entries:
+
+* Network ID:
+The network ID or destination corresponding to the route.
+* Subnet Mask:
+The mask that is used to match a destination IP address to the network ID.
+* Next Hop:
+The IP address to which the packet is forwarded
+* Outgoing Interface:
+Outgoing interface the packet should go out to reach the destination network.
+* Metric:
+A common use of the metric is to indicate the minimum number of hops (routers crossed) to the network ID.
+
+
+Routing table entries can be used to store the following types of routes:
+
+1. Directly Attached Network IDs
+![Directly Attached Newtork](https://campus.barracuda.com/resources/attachments/image/79462765/1/direct_rt.png)
+The Directly Attached Network ID Routes entry is used for routes that are connected to the local network. The Remote Network ID Routes entry is used for routes that can be accessed only via routers, or remotely. Host Routes allows you to enter a specific route to a specific host.
+
+2. Remote Network IDs
+Network remote identification, or remote ID, is the ability of an uncrewed aircraft system (UAS) to provide the identification of its operator, its location, and related operational information that can be received by authorised and public parties through the duration of the flight. A routing table is a database that keeps track of paths, like a map, and uses these to determine which way to forward traffic as well as stores route information about remote networks.
+
+3. Host Routes
+IT is a  route to a specific internetwork address (Network ID and Host ID). Host routes allow intelligent routing decisions to be made for each network address. Host routes are used to create custom routes to control or optimize specific types of network traffic.
+
+Whenever a packet is sent through a router to be forwarded to a host on another network, the router consults the routing table to find the IP address of the destination device and the best path to reach it.
+
+4. Default Route
+![Default Route](https://cdn.networklessons.com/wp-content/uploads/2017/01/rip-default-route-lab-topology.png)
+The default route is a route that a router uses to forward an incoming packet when no other route is available for that packet in the routing table. Routers use the routing table to make the forwarding decision. A routing table entry consists of two pieces: the remote network and the local interface that is connected to that network.
+
+5. Destination Route
+
+The main purpose of a routing table is to help routers make effective routing decisions. Whenever a packet is sent through a router to be forwarded to a host on another network, the router consults the routing table to find the IP address of the destination device and the best path to reach it.
 
 
 
