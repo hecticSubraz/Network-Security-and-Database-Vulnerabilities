@@ -8,6 +8,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 4](#Day-4)
 - [Day 5](#Day-5)
 - [Day 6](#Day-6)
+- [Day 7](#Day-7)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -401,6 +402,114 @@ The default route is a route that a router uses to forward an incoming packet wh
 5. Destination Route
 
 The main purpose of a routing table is to help routers make effective routing decisions. Whenever a packet is sent through a router to be forwarded to a host on another network, the router consults the routing table to find the IP address of the destination device and the best path to reach it.
+
+
+
+# Day 7
+## Internet Protocol(IP),IP Address and Traffic routing
+ Today I learned about Internet Protocol(IP), IP Address,its working process, types of IP address, IP address security threats and method of protecting and hiding IP address.
+
+## Internet Protocol(IP)
+The Internet Protocol (IP) is the network layer communications protocol in the Internet protocol suite for relaying datagrams across network boundaries. Its routing function enables internetworking, and essentially establishes the Internet.
+
+IP has the task of delivering packets from the source host to the destination host solely based on the IP addresses in the packet headers. For this purpose, IP defines packet structures that encapsulate the data to be delivered. It also defines addressing methods that are used to label the datagram with source and destination information.
+
+### Function of Internet Protocol(IP)
+The Internet Protocol is responsible for addressing host interfaces, encapsulating data into datagrams (including fragmentation and reassembly) and routing datagrams from a source host interface to a destination host interface across one or more IP networks.For these purposes, the Internet Protocol defines the format of packets and provides an addressing system.
+
+Each datagram has two components: a header and a payload. The IP header includes source IP address, destination IP address, and other metadata needed to route and deliver the datagram. The payload is the data that is transported. This method of nesting the data payload in a packet with a header is called encapsulation.
+
+IP addressing entails the assignment of IP addresses and associated parameters to host interfaces. The address space is divided into subnetworks, involving the designation of network prefixes. IP routing is performed by all hosts, as well as routers, whose main function is to transport packets across network boundaries. Routers communicate with one another via specially designed routing protocols, either interior gateway protocols or exterior gateway protocols, as needed for the topology of the network.
+
+## IP Address
+An IP address is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network.
+IP addresses are not random. They are mathematically produced and allocated by the Internet Assigned Numbers Authority (IANA), a division of the Internet Corporation for Assigned Names and Numbers (ICANN). ICANN is a non-profit organization that was established in the United States in 1998 to help maintain the security of the internet and allow it to be usable by all.
+
+### Workng Process of IP Address
+Internet Protocol Address by communicating using set guidelines to pass information. All devices find, send, and exchange information with other connected devices using Internet protocol.
+
+The process works like this
+
+1. Your device indirectly connects to the internet by connecting at first to a network connected to the internet, which then grants your device access to the internet.
+2. When you are at home, that network will probably be your Internet Service Provider (ISP). At work, it will be your company network.
+3. Your IP address is assigned to your device by your ISP.
+4. Your internet activity goes through the ISP, and they route it back to you, using your IP address. Since they are giving you access to the internet, it is their role to assign an IP address to your device.
+5. However, your IP address can change. For example, turning your modem or router on or off can change it. Or you can contact your ISP, and they can change it for you.
+6. When you are out and about; for example, traveling; and you take your device with you, your home IP address does not come with you. This is because you will be using another network (Wi-Fi at a hotel, airport, or coffee shop, etc.) to access the internet and will be using a different (and temporary) IP address, assigned to you by the ISP of the hotel, airport or coffee shop.
+
+### Types of IP addresses
+There are different categories of IP addresses, and within each category, different types.
+#### Consumer IP addresses
+Every individual or business with an internet service plan will have two types of IP addresses: their private IP addresses and their public IP address. The terms public and private relate to the network location that is, a private IP address is used inside a network, while a public one is used outside a network.
+
+* Private IP Address:
+Every device that connects to your internet network has a private IP address. This includes computers, smartphones, and tablets but also any Bluetooth-enabled devices like speakers, printers, or smart TVs. With the growing internet of things, the number of private IP addresses you have at home is probably growing. Your router needs a way to identify these items separately, and many items need a way to recognize each other. Therefore, your router generates private IP addresses that are unique identifiers for each device that differentiate them on the network.
+
+* Public IP Address:
+A public IP address is the primary address associated with your whole network. While each connected device has its own IP address, they are also included within the main IP address for your network. As described above, your public IP address is provided to your router by your ISP. Typically, ISPs have a large pool of IP addresses that they distribute to their customers. Your public IP address is the address that all the devices outside your internet network will use to recognize your network.
+
+Public IP addresses are further classified into two forms
+
+1. Dynamic IP addresses:
+Dynamic IP addresses change automatically and regularly. ISPs buy a large pool of IP addresses and assign them automatically to their customers. Periodically, they re-assign them and put the older IP addresses back into the pool to be used for other customers. The rationale for this approach is to generate cost savings for the ISP. Automating the regular movement of IP addresses means they don’t have to carry out specific actions to re-establish a customer's IP address if they move home, for example. There are security benefits, too, because a changing IP address makes it harder for criminals to hack into your network interface.
+
+2. Static IP addresses:
+In contrast to dynamic IP addresses, static addresses remain consistent. Once the network assigns an IP address, it remains the same. Most individuals and businesses do not need a static IP address, but for businesses that plan to host their own server, it is crucial to have one. This is because a static IP address ensures that websites and email addresses tied to it will have a consistent IP address — vital if you want other devices to be able to find them consistently on the web.
+
+#### Website IP Address:
+For website owners who don’t host their own server, and instead rely on a web hosting package which is the case for most websites there are two types of website IP addresses. These are shared and dedicated.
+
+1. Shared IP addresses
+Websites that rely on shared hosting plans from web hosting providers will typically be one of many websites hosted on the same server. This tends to be the case for individual websites or SME websites, where traffic volumes are manageable, and the sites themselves are limited in terms of the number of pages, etc. Websites hosted in this way will have shared IP addresses.
+
+2. Dedicated IP addresses:
+Some web hosting plans have the option to purchase a dedicated IP address (or addresses). This can make obtaining an SSL certificate easier and allows you to run your own File Transfer Protocol (FTP) server. This makes it easier to share and transfer files with multiple people within an organization and allow anonymous FTP sharing options. A dedicated IP address also allows you to access your website using the IP address alone rather than the domain name — useful if you want to build and test it before registering your domain.
+
+### IP address security Threats
+Cybercriminals can use various techniques to obtain your IP address. Two of the most common are social engineering and online stalking.
+
+1. Social Engineering:
+Attackers can use social engineering to deceive you into revealing your IP address. For example, they can find you through Skype or a similar instant messaging application, which uses IP addresses to communicate. If you chat with strangers using these apps, it is important to note that they can see your IP address. Attackers can use a Skype Resolver tool, where they can find your IP address from your username.
+
+2. Online stalking:
+Criminals can track down your IP address by merely stalking your online activity. Any number of online activities can reveal your IP address, from playing video games to commenting on websites and forums.
+Once they have your IP address, attackers can go to an IP address tracking website, such as whatismyipaddress.com, type it in, and then get an idea of your location. They can then cross-reference other open-source data if they want to validate whether the IP address is associated with you specifically. They can then use LinkedIn, Facebook, or other social networks that show where you live, and then see if that matches the area given.
+
+If a Facebook stalker uses a phishing attack against people with your name to install spying malware, the IP address associated with your system would likely confirm your identity to the stalker.
+
+If cybercriminals know your IP address, they can launch attacks against you or even impersonate you. It is important to be aware of the risks and how to mitigate them.
+
+When The Hacker gets IP Address, there is high chance of  misusing it.
+
+#### Risks:
+
+1. Downloading illegal content using your IP address:
+
+Hackers are known to use hacked IP addresses to download illegal content and anything else they do not want to be traced back to them. For example, using the identity of your IP address, criminals could download pirated movies, music, and video – which would breach your ISP’s terms of use and much more seriously, content related to terrorism or child pornography. This could mean that you go through no fault of your own and could attract the attention of law enforcement.
+
+2. Tracking down your location:
+
+If they know your IP address, hackers can use geolocation technology to identify your region, city, and state. They only need to do a little more digging on social media to identify your home and potentially burgle it when they know you are away.
+
+3. Directly attacking your network:
+Criminals can directly target your network and launch a variety of assaults. One of the most popular is a DDoS attack (distributed denial-of-service). This type of cyberattack occurs when hackers use previously infected machines to generate a high volume of requests to flood the targeted system or server. This creates too much traffic for the server to handle, resulting in a disruption of services. Essentially, it shuts down your internet. While this attack is typically launched against businesses and video game services, it can occur against an individual, though this is much less common. Online gamers are at particularly high risk for this, as their screen is visible while streaming (on which an IP address can be discovered).
+
+4. Hacking into your device:
+The internet uses ports as well as your IP address to connect. There are thousands of ports for every IP address, and a hacker who knows your IP can try those ports to attempt to force a connection. For example, they could take over your phone and steal your information. If a criminal does obtain access to your device, they could install malware on it.
+
+#### Method of Protecting and Hiding IP Address:
+Hiding your IP address is a way to protect your personal information and online identity. The two primary ways to hide your IP address are:
+
+1. Using a proxy server:
+
+A proxy server is an intermediary server through which your traffic is routed.
+The internet servers you visit see only the IP address of that proxy server and not your IP address.When those servers send information back to you, it goes to the proxy server, which then routes it to you.
+
+A drawback of proxy servers is that some of the services can spy on you, so you need to trust it. Depending on which one you use, they can also insert ads into your browser.
+
+2. Using a Virtual Private Network:
+
+When you connect your computer or smartphone or tablet to a VPN, the device acts as if it is on the same local network as the VPN.All your network traffic is sent over a secure connection to the VPN.Because your computer behaves as if it is on the network, you can securely access local network resources even when you are in another country.You can also use the internet as if you were present at the VPN’s location, which has benefits if you are using public Wi-Fi or want to access geo-blocked websites.
 
 
 
