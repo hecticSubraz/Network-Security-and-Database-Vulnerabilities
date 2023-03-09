@@ -406,7 +406,7 @@ The main purpose of a routing table is to help routers make effective routing de
 
 
 # Day 7
-## Internet Protocol(IP),IP Address and Traffic routing
+## Internet Protocol(IP)and IP Address
  Today I learned about Internet Protocol(IP), IP Address,its working process, types of IP address, IP address security threats and method of protecting and hiding IP address.
 
 ## Internet Protocol(IP)
