@@ -524,6 +524,7 @@ When you connect your computer or smartphone or tablet to a VPN, the device acts
  To make sure that each message reaches its target location intact, the TCP/IP model breaks down the data into small bundles and afterward reassembles the bundles into the original message on the opposite end. Sending the information in little bundles of information makes it simpler to maintain efficiency as opposed to sending everything in one go. 
 
 After a particular message is broken down into bundles, these bundles may travel along multiple routes if one route is jammed but the destination remains the same.
+
 ![Breaking down of Data](https://media.geeksforgeeks.org/wp-content/uploads/20211104135754/tcp3-660x322.PNG)
 
 In above figure, we can see that the message is being broken down, then reassembled from a different order at the destination
