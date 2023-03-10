@@ -9,6 +9,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 5](#Day-5)
 - [Day 6](#Day-6)
 - [Day 7](#Day-7)
+- [Day 8](#Day-8)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -425,7 +426,7 @@ IP addressing entails the assignment of IP addresses and associated parameters t
 An IP address is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network.
 IP addresses are not random. They are mathematically produced and allocated by the Internet Assigned Numbers Authority (IANA), a division of the Internet Corporation for Assigned Names and Numbers (ICANN). ICANN is a non-profit organization that was established in the United States in 1998 to help maintain the security of the internet and allow it to be usable by all.
 
-### Workng Process of IP Address
+### Working Process of IP Address
 Internet Protocol Address by communicating using set guidelines to pass information. All devices find, send, and exchange information with other connected devices using Internet protocol.
 
 The process works like this
@@ -510,6 +511,89 @@ A drawback of proxy servers is that some of the services can spy on you, so you 
 2. Using a Virtual Private Network:
 
 When you connect your computer or smartphone or tablet to a VPN, the device acts as if it is on the same local network as the VPN.All your network traffic is sent over a secure connection to the VPN.Because your computer behaves as if it is on the network, you can securely access local network resources even when you are in another country.You can also use the internet as if you were present at the VPN’s location, which has benefits if you are using public Wi-Fi or want to access geo-blocked websites.
+
+
+# Day 8
+##  Transport Protocols UDP and TCP
+ Today I was introduced to two major transport protocol, Transmission Control Protocol(TCP)and the User Datagram Protocol(UDP) and their working process.
+
+ ### Transmission Control Protocol(TCP):
+ TCP (Transmission Control Protocol) is one of the main protocols of the Internet protocol suite. It lies between the Application and Network Layers which are used in providing reliable delivery services. It is a connection-oriented protocol for communications that helps in the exchange of messages between different devices over a network. The Internet Protocol (IP), which establishes the technique for sending data packets between computers, works with TCP. So, Generally it is represented as TCP/IP.
+
+ ### Working Process of TCP:
+ To make sure that each message reaches its target location intact, the TCP/IP model breaks down the data into small bundles and afterward reassembles the bundles into the original message on the opposite end. Sending the information in little bundles of information makes it simpler to maintain efficiency as opposed to sending everything in one go. 
+
+After a particular message is broken down into bundles, these bundles may travel along multiple routes if one route is jammed but the destination remains the same.
+![Breaking down of Data](https://media.geeksforgeeks.org/wp-content/uploads/20211104135754/tcp3-660x322.PNG)
+
+In above figure, we can see that the message is being broken down, then reassembled from a different order at the destination
+
+For example, When a user requests a web page on the internet, somewhere in the world, the server processes that request and sends back an HTML Page to that user. The server makes use of a protocol called the HTTP Protocol. The HTTP then requests the TCP layer to set the required connection and send the HTML file.
+
+Now, the TCP breaks the data into small packets and forwards it toward the Internet Protocol (IP) layer. The packets are then sent to the destination through different routes.
+
+The TCP layer in the user’s system waits for the transmission to get finished and acknowledges once all packets have been received.
+
+## User Datagram Protocal(UDP):
+User Datagram Protocol (UDP) is a Transport Layer protocol. UDP is a part of the Internet Protocol suite, referred to as UDP/IP suite. Unlike TCP, it is an unreliable and connectionless protocol. So, there is no need to establish a connection prior to data transfer. The UDP helps to establish low-latency and loss-tolerating connections establish over the network.The UDP enables process to process communication.
+
+Though Transmission Control Protocol (TCP) is the dominant transport layer protocol used with most of the Internet services; provides assured delivery, reliability, and much more but all these services cost us additional overhead and latency. Here, UDP comes into the picture. For real-time services like computer gaming, voice or video communication, live conferences; we need UDP. Since high performance is needed, UDP permits packets to be dropped instead of processing delayed packets. There is no error checking in UDP, so it also saves bandwidth. 
+User Datagram Protocol (UDP) is more efficient in terms of both latency and bandwidth. 
+
+### Working Process of UDP
+User datagram protocol is a standardized communication protocol that transfers data between computers in a network. However, unlike other protocols such as TCP, UDP simplifies data transfer by sending packets (or, more specifically, datagrams) directly to the receiver without first establishing a two-way connection. UDP does not indicate the transmission order for its datagrams or even confirm their arrival.
+
+UDP features checksums for ensuring data integrity and port numbers for defining the role played by the data being transmitted. However, it does not feature a mandatory ‘handshake’ between the sender and the receiver before the commencement of data transfer.
+
+This makes UDP less than ideal for transferring sensitive information, as the receiver may obtain data that is out of order, glitchy, or with blank spaces. As discussed above, UDP is seen in applications where sending data to its destination on time is more critical than transmitting it without any glitches.
+
+#### UDP Header
+
+UDP header is an 8-bytes fixed and simple header, while for TCP it may vary from 20 bytes to 60 bytes. The first 8 Bytes contains all necessary header information and the remaining part consist of data. UDP port number fields are each 16 bits long, therefore the range for port numbers is defined from 0 to 65535; port number 0 is reserved. Port numbers help to distinguish different user requests or processes. 
+
+1. Source Port: Source Port is a 2 Byte long field used to identify the port number of the source.
+2. Destination Port: It is a 2 Byte long field, used to identify the port of the destined packet.
+3. Length: Length is the length of UDP including the header and the data. It is a 16-bits field.
+4. Checksum: Checksum is 2 Bytes long field. It is the 16-bit one’s complement of the one’s complement sum of the UDP header, the pseudo-header of information from the IP header, and the data, padded with zero octets at the end (if necessary) to make a multiple of two octets.
+
+Notes – Unlike TCP, the Checksum calculation is not mandatory in UDP. No Error control or flow control is provided by UDP. Hence UDP depends on IP and ICMP for error reporting. Also UDP provides port numbers so that is can differentiate between users requests.
+
+#### Applications of UDP: 
+* Used for simple request-response communication when the size of data is less and hence there is lesser concern about flow and error control.
+* It is a suitable protocol for multicasting as UDP supports packet switching.
+* UDP is used for some routing update protocols like RIP(Routing Information Protocol).
+* Normally used for real-time applications which can not tolerate uneven delays between sections of a received message.
+* Following implementations uses UDP as a transport layer protocol: 
+1. NTP (Network Time Protocol)
+2. DNS (Domain Name Service)
+3. BOOTP, DHCP.
+4. NNP (Network News Protocol)
+5. Quote of the day protocol
+6. TFTP, RTSP, RIP.
+* The application layer can do some of the tasks through UDP- 
+1. Trace Route
+2. Record Route
+3. Timestamp
+* UDP takes a datagram from Network Layer, attaches its header, and sends it to the user. So, it works fast.
+* Actually, UDP is a null protocol if you remove the checksum field.
+1. Reduce the requirement of computer resources.
+2. When using the Multicast or Broadcast to transfer.
+3. The transmission of Real-time packets, mainly in multimedia applications.
+
+#### UDP PSEUDO HEADER:
+The purpose of using a pseudo-header is to verify that the UDP packet has reached its correct destination. The correct destination consist of a specific machine and a specific protocol port number within that machine.
+
+![UDP pseudo header](https://media.geeksforgeeks.org/wp-content/uploads/20230209140709/udp.png)
+
+#### UDP pseudo header details:
+
+* The UDP header itself specify only protocol port number.thus , to verify the destination UDP on the sending machine computes a checksum that covers the destination IP address as well as the UDP packet.
+* At the ultimate destination, UDP software verifies the checksum using the destination IP address obtained from the header of the IP packet that carried the UDP message.
+* If the checksum agrees, then it must be true that the packet has reached the intended destination host as well as the correct protocol port within that host.
+
+
+
+
 
 
 
