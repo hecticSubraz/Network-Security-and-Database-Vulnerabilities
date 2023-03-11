@@ -592,6 +592,107 @@ The purpose of using a pseudo-header is to verify that the UDP packet has reache
 * At the ultimate destination, UDP software verifies the checksum using the destination IP address obtained from the header of the IP packet that carried the UDP message.
 * If the checksum agrees, then it must be true that the packet has reached the intended destination host as well as the correct protocol port within that host.
 
+# Day 9
+##  Transport Protocols UDP and TCP
+ Today I continued my study on this topic and learned the features, Advantages and Disadvantages and vulnerabilities of Transmission Control Protocol(TCP) and User Datagram Protocol(UDP).
+
+### Features of Transmission Control Protocol(TCP)
+Some of the most prominent features of Transmission control protocol are
+
+1. Segment Numbering System
+* TCP keeps track of the segments being transmitted or received by assigning numbers to each and every single one of them.
+* A specific Byte Number is assigned to data bytes that are to be transferred while segments are assigned sequence numbers.
+* Acknowledgment Numbers are assigned to received segments.
+2. Flow Control
+* Flow control limits the rate at which a sender transfers data. This is done to ensure reliable delivery.
+* The receiver continually hints to the sender on how much data can be received (using a sliding window)
+3. Error Control
+* TCP implements an error control mechanism for reliable data transfer
+* Error control is byte-oriented
+* Segments are checked for error detection
+* Error Control includes – Corrupted Segment & Lost Segment Management, Out-of-order segments, Duplicate segments, etc.
+4. Congestion Control
+* TCP takes into account the level of congestion in the network
+* Congestion level is determined by the amount of data sent by a sender
+
+### Advantages of TCP
+* It is a reliable protocol.
+* It provides an error-checking mechanism as well as one for recovery.
+* It gives flow control.
+* It makes sure that the data reaches the proper destination in the exact order that it was sent.
+* Open Protocol, not owned by any organization or individual.
+* It assigns an IP address to each computer on the network and a domain name to each site thus making each device site to be distinguishable over the network.
+
+### Disadvantages
+* TCP is made for Wide Area Networks, thus its size can become an issue for small networks with low resources.
+* TCP runs several layers so it can slow down the speed of the network.
+* It is not generic in nature. Meaning, it cannot represent any protocol stack other than the TCP/IP suite. E.g., it cannot work with a Bluetooth connection.
+* No modifications since their development around 30 years ago.
+
+### Vulnerabilities in TCP:
+TCP may be attacked in a variety of ways. The results of a thorough security assessment of TCP, along with possible mitigations for the identified issues, were published in 2009, and is currently being pursued within the IETF.
+
+1. Denial of service:
+By using a spoofed IP address and repeatedly sending purposely assembled SYN packets, followed by many ACK packets, attackers can cause the server to consume large amounts of resources keeping track of the bogus connections. This is known as a SYN flood attack. Proposed solutions to this problem include SYN cookies and cryptographic puzzles, though SYN cookies come with their own set of vulnerabilities. Sockstress is a similar attack, that might be mitigated with system resource management. An advanced DoS attack involving the exploitation of the TCP Persist Timer was analyzed in Phrack #66. PUSH and ACK floods are other variants.
+
+2. Connection hijacking
+An attacker who is able to eavesdrop a TCP session and redirect packets can hijack a TCP connection. To do so, the attacker learns the sequence number from the ongoing communication and forges a false segment that looks like the next segment in the stream. Such a simple hijack can result in one packet being erroneously accepted at one end. When the receiving host acknowledges the extra segment to the other side of the connection, synchronization is lost. Hijacking might be combined with Address Resolution Protocol (ARP) or routing attacks that allow taking control of the packet flow, so as to get permanent control of the hijacked TCP connection.
+
+Impersonating a different IP address was not difficult prior to RFC 1948, when the initial sequence number was easily guessable. That allowed an attacker to blindly send a sequence of packets that the receiver would believe to come from a different IP address, without the need to deploy ARP or routing attacks: it is enough to ensure that the legitimate host of the impersonated IP address is down, or bring it to that condition using denial-of-service attacks. This is why the initial sequence number is now chosen at random.
+
+3. TCP veto:
+An attacker who can eavesdrop and predict the size of the next packet to be sent can cause the receiver to accept a malicious payload without disrupting the existing connection. The attacker injects a malicious packet with the sequence number and a payload size of the next expected packet. When the legitimate packet is ultimately received, it is found to have the same sequence number and length as a packet already received and is silently dropped as a normal duplicate packet the legitimate packet is "vetoed" by the malicious packet. Unlike in connection hijacking, the connection is never desynchronized and communication continues as normal after the malicious payload is accepted. TCP veto gives the attacker less control over the communication, but makes the attack particularly resistant to detection. The large increase in network traffic from the ACK storm is avoided. The only evidence to the receiver that something is amiss is a single duplicate packet, a normal occurrence in an IP network. The sender of the vetoed packet never sees any evidence of an attack.
+
+4. TCP Reset Attack:
+TCP reset attack also known as a "forged TCP reset" or "spoofed TCP reset", is a way to terminate a TCP connection by sending a forged TCP reset packet. This tampering technique can be used by a firewall or abused by a malicious attacker to interrupt Internet connections.
+
+### Feaatures of UDP
+1. Provides connectionless, unreliable service.
+2. UDP faster than TCP.
+3. Adds only checksum and process-to-process addressing to IP.
+4. Used for DNS and NFS.
+5. Used when socket is opened in datagram mode.
+6. It sends bulk quantity of packets.
+8. No acknowledgment.
+9. Good for video streaming it is an unreliable protocol.
+10. It does not care about the delivery of the packets or the sequence of delivery.
+11. No flow control /congestion control, sender can overrun receiver's buffer.
+12. Real time application like video conferencing needs (Because it is faster).
+13. An UDP datagram is used in Network File System (NFS), DNS, SNMP, TFTP etc.
+14. It has no handshaking or flow control.
+15. It not even has windowing capability.
+16. It is a fire and forget type protocol.
+17. An application can use a UDP port number and another application can use the same port number for a TCP session from the same IP address.
+18. UDP and IP are on different levels of the OSI stack and corresponds to other protocols like TCP and ICMP.
+19. No connection establishment tear down; data is just sent right away.
+
+### Advantages of UDP:
+* UDP does not need to require a connection to be established and maintained
+* UDP uses a small packet size with a small header. This fewer bytes in the overhead makes UDP protocol need for less time in processing the packet as well as needless memory
+* UDP uses checksum with all packets for error detection
+* UDP can be used in events where a single packet of data needs to be exchanged between the hosts
+* Broadcast and multicast transmission are available with UDP
+* UDP doesn't restrict you to a connection based communication model, so startup latency in distributed applications is much lower, as is operating system overhead fast.
+
+### Disadvantages of UDP:
+* UDP is an unreliable and connectionless protocol. 
+* UDP has no windowing and no function to ensure data is received in the same order as it was transmitted
+* UDP does not use any error control. So UDP detects an error in the received packet. It silently drops it
+* The router can be careless with UDP. They do not retransmit a UDP datagram after the collision and will often discard UDP packets before TCP packets
+* There is no flow control and no acknowledgement for received data
+Only the application layer deals with error recovery. Hence applications can simply turn to the user to send the message again
+
+### Vulnerabilities in UDP:
+UDP is not protected by any encryption. You can add encryption to UDP, but it is not available by default. The lack of encryption means that anyone can see the traffic, change it, and send it on to its destination. Changing the data in the traffic will alter the 16-bit checksum, but the checksum is optional and is not always used. When the checksum is used, the hacker can create a new checksum based on the new data payload, and then record it in the header as a new checksum. The destination device will find that the checksum matches the data without knowing that the data has been altered. This type of attack is not widely used.
+
+1. UDP Flood Attacks:
+We are more likely to see a UDP flood attack. In a UDP flood attack, all the resources on a network are consumed. The hacker must use a tool like UDP Unicorn or Low Orbit Ion Cannon. These tools send a flood of UDP packets, often from a spoofed host, to a server on the subnet. The program will sweep through all the known ports trying to find closed ports. This will cause the server to reply with an ICMP port unreachable message. Because there are many closed ports on the server, this creates a lot of traffic on the segment, which uses up most of the bandwidth. The result is very similar to a DoS attack.
+
+2. DNS Amplification:
+A DNS amplification attack involves a hacker sending UDP packets with a spoofed IP address, which corresponds to the IP of the victim, to its DNS resolvers. The DNS resolvers then send their response to the victim. The attack is crafted such that the DNS response is much larger than the original request, which creates amplification of the original attack.
+
+3. UDP Port Scan:
+Attackers send UDP packets to ports on a server to determine which ports are open. If a server responds with an ICMP ‘Destination Unreachable’ message, the port is not open. If there is no such response, the attacker infers that the port is open, and then use this information to plan an attack on the system.
 
 
 
