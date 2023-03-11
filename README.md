@@ -595,7 +595,7 @@ The purpose of using a pseudo-header is to verify that the UDP packet has reache
 
 # Day 9
 ##  Transport Protocols UDP and TCP
- Today I continued my study on this topic and learned the features, Advantages and Disadvantages and vulnerabilities of Transmission Control Protocol(TCP) and User Datagram Protocol(UDP).
+ Today I continued my study on this topic and learned the features, Advantages and Disadvantages as well as  vulnerabilities of Transmission Control Protocol(TCP) and User Datagram Protocol(UDP).
 
 ### Features of Transmission Control Protocol(TCP)
 Some of the most prominent features of Transmission control protocol are
