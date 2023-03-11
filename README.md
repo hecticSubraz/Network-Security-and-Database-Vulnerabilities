@@ -10,6 +10,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 6](#Day-6)
 - [Day 7](#Day-7)
 - [Day 8](#Day-8)
+- [Day 8](#Day-8)
 
 # Day 1
 ## Introduction to TCP/IP 
