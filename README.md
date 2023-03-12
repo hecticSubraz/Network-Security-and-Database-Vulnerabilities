@@ -700,7 +700,7 @@ Attackers send UDP packets to ports on a server to determine which ports are ope
 # Day 10
 
 ##  Next Generation Firewalls Overview
- Today I learned about  next generation firewalls, its features,benifits, able to compare next generation firewalls and traditional firewalls, importance and its types. 
+ Today I learned about  next generation firewalls, its features,benefits, able to compare next generation firewalls and traditional firewalls, importance and its types. 
 
  ### Next Generation Firewalls(NGFW)
  A next-generation firewall is within the third generation of firewall technology, designed to address advanced security threats at the application level through intelligent, context-aware security features. An NGFW combines traditional firewall capabilities like packet filtering and stateful inspection with others to make better decisions about what traffic to allow. 
