@@ -11,6 +11,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 7](#Day-7)
 - [Day 8](#Day-8)
 - [Day 9](#Day-9)
+- [Day 10](#Day-10)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -696,6 +697,88 @@ A DNS amplification attack involves a hacker sending UDP packets with a spoofed 
 Attackers send UDP packets to ports on a server to determine which ports are open. If a server responds with an ICMP ‘Destination Unreachable’ message, the port is not open. If there is no such response, the attacker infers that the port is open, and then use this information to plan an attack on the system.
 
 
+# Day 10
+
+##  Next Generation Firewalls Overview
+ Today I learned about  next generation firewalls, its features,benifits, able to compare next generation firewalls and traditional firewalls, importance and its types. 
+
+ ### Next Generation Firewalls(NGFW)
+ A next-generation firewall is within the third generation of firewall technology, designed to address advanced security threats at the application level through intelligent, context-aware security features. An NGFW combines traditional firewall capabilities like packet filtering and stateful inspection with others to make better decisions about what traffic to allow. 
+
+ A next-generation firewall has the ability to filter packets based on applications and to inspect the data contained in packets (rather than just their IP headers). In other words, it operates at up to layer 7 (the application layer) in the OSI model, whereas previous firewall technology operated only up to level 4 (the transport layer). Attacks that take place at layers 4–7 of the OSI model are increasing, making this an important capability.
+
+ ### Features of Next Generation Firewalls:
+ Next-generation firewall specifications vary by provider, but they generally include some combination of the following features:
+
+#### Application awareness: 
+Application awareness or the ability to filter traffic and apply complex rules based on application (rather than just based on port). This is a key feature of next-generation firewalls: They can block traffic from certain applications, as well as maintain greater control over individual applications.
+
+#### Deep-packet inspection:
+NGFW  inspects the data contained in packets. Deep-packet inspection is an improvement over traditional firewall technology, which only inspected a packet’s IP header to determine its source and destination. 
+
+#### Intrusion Prevention System (IPS):
+It monitors the network for malicious activity and blocks it where it occurs. This monitoring can be signature-based (matching activity to signatures of well-known threats), policy-based (blocking activity that violates security policies), or anomaly-based (monitoring for abnormal behavior).
+
+#### High performance:
+This features allows the firewall to monitor large amounts of network traffic without slowdown. Next-generation firewalls include a number of security features that require processing time, so high performance are important to avoid disrupting business operations.
+
+#### External threat intelligence:
+External Threat intelligence or communication with a threat intelligence network to ensure that threat information is up to date and help identify bad actors.
+
+In addition to these foundational features, next-generation firewalls may include additional features such as antivirus and malware protection. They may also be implemented as a Firewall as a Service (FWaaS), a cloud-based service that provides scalability and easier maintenance. With FWaaS, the firewall software is maintained by the service provider, and resources scale automatically to meet processing demand. This frees enterprise IT teams from dealing with the burden of handling patches, upgrades, and sizing.
+
+### Benifits of NGFW:
+#### Application-level security functions such as IDS and IPS:
+An NGFW has added the level of application security functions such as intrusion detection systems aka IDS, and intrusion prevention systems aka IPS.
+
+These applications help you to improve packet-content filtering. These features can also identify, analyse and act against irregular deviations from the standard set of activities, threat signatures and intelligent attacks based on user behavior.
+
+#### Single Console Access:
+A new generation firewall can be easily accessed from a single console, unlike the case of the traditional firewall where you need to set up and individually configure the firewall manually.
+
+#### Multi-Layered Protection:
+A traditional firewall can block access through ports (single layer protection), which proves insignificant in the complex and evolving landscape of data architecture.
+
+NGFW offers multi-layered protection by inspecting traffic from layer 2 to layer 7 and at the same time understanding the exact nature of data transfer.So if the data transfer is within the limits of defined firewall policy, will be transferred else it will be blocked.
+
+#### Simplified Infrastructure:
+We need to have a separate security appliance for every new threat. But with the new generation firewall, you can easily manage and update the security protocols from a single authorized device.This simplifies the complicated security infrastructure and saves time on day-to-day operational activities.
+
+#### Optimal Use of Network Speed:
+In the case of the traditional firewall, the network speed decreases as the number of security protocols and devices increases.
+This happens because the dedicated network speed does not reach its expected potential with the increase in security devices and services.But, with the next-generation firewall, you can constantly achieve the potential throughput irrespective of the number of devices and security protocols.
+
+#### Antivirus, Ransomware and Spam Protection & Endpoint Security:
+An NGFW comes with a complete package of antivirus, ransomware & spam protection along with endpoint security to protect your business data.
+With the help of these features, you don’t necessarily need separate tools for those purposes.
+
+Since NGFW comprises all these features, you do not only save the time and effort required, but it also helps you to monitor and control the cyber threats easily.
+
+#### Capability to Implement Role-based Access
+New generation firewalls have an inherent ability to detect user identity. It can also work with different user roles and limit the scope of access for an individual and/or group.
+This feature helps the organizations to set role-based access to certain portions of their data and its content.
+Organizations can also make some of their data public and keep the rest of the confidential data with themselves.
+
+#### Key Takeaways:
+An NGFW does not only cover all the traditional firewall features but is also more than capable of tackling the modern-day cyber threats with conviction too.
+With the number of features that an NGFW provides, it is undoubtedly becoming a useful technology in cybersecurity.
+
+### Next Generation Firewalls vs Traditional Firewalls:
+Traditional firewalls rely on port/protocol inspection and blocking to protect enterprise networks at the data link and transport layers (layers 2 and 4 of the OSI model). This static approach was effective in the past, when the IT environment was less dynamic than it is now, and applications could be identified by port. But with the increasing complexity of virtualized networks and more advanced security threats, it’s no longer enough. Next-generation firewalls are smarter: They can filter packets based on application (layer 7 of the OSI model), and even based on behavior, making fine-grained distinctions that are far more effective than the generic methods used by traditional firewalls. They also refer to external data to identify threats. This dynamic, flexible approach allows them to identify and defend against attackers that are much more sophisticated than in the past.
+
+### Importance:
+Targeted and sophisticated security threats are causing more damage to internal networks than ever before. Traditional firewall technologies are heavily reliant on port/protocol inspection, which is ineffective in a virtualized environment where addresses and ports are assigned dynamically. By comparison, a next-generation firewall uses deep-packet filtering to inspect the contents of packets, provides layer 7 application filtering, and can even monitor and block suspicious activity. These capabilities are a must to ensure security in a complex, dynamic environment.
+
+### Types of NGFW:
+* Packet filtering firewall: Looks at the IP header of packets and drops ones that are flagged. 
+
+* Circuit-level gateway: Flags malicious content based on TCP handshakes and other network protocol session initiation messages, rather than looking at the packets themselves.
+
+* Stateful inspection firewall: Combines packet filtering with session monitoring for an additional level of security.
+
+* Application-level gateway: Filters packets by destination port and HTTP request string. Also known as a proxy firewall.
+
+* Next-generation firewall: Employs application-level, context-aware, intelligent technology to protect against advanced threats. 
 
 
 
