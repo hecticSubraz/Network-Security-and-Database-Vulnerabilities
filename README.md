@@ -945,7 +945,7 @@ All technology has its challenges and limitations that sit alongside its benefit
 # Day 12
 
 ## Intrusion Detection System(IDS) and Intrusion Prevention system(IPS)
- Today I learned about Intrusion Detection system(IDS),Intrusion Prevention System(IPS),how they works,classification,benefits and their detection method. 
+ Today I learned about Intrusion Detection system(IDS),Intrusion Prevention System(IPS),how they works,their classification as well as benefits and their detection method. 
 
 ### Intrusion Detection System(IDS):
 
