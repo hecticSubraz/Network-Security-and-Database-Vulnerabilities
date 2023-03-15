@@ -14,6 +14,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 10](#Day-10)
 - [Day 11](#Day-11)
 - [Day 12](#Day-12)
+- [Day 13](#Day-13)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1071,6 +1072,84 @@ The main difference between Intrusion Prevention System (IPS) with Intrusion Det
 3. IPS also can correct cyclic redundancy check (CRC) errors, defragment packet streams, mitigate TCP sequencing issues and clean up unwanted transport and network layer options. 
 
 
+# Day 13
+
+## Highly availability and High availability Clusters
+ Today I learned about highly availability in information tehnology,how it works as well as how it  can be achieved through clustering, its measurement process, High available cluster's concept and its working process.
+
+### High availability:
+High availability (HA) is the ability of a system to operate continuously without failing for a designated period of time. HA works to ensure a system meets an agreed-upon operational performance level. In information technology (IT), a widely held but difficult-to-achieve standard of availability is known as five-nines availability, which means the system or product is available 99.999% of the time.
+HA systems are used in situations and industries where it is critical the system remains operational. Real-world high-availability systems include military control, autonomous vehicle, industrial and healthcare systems. People's lives depend on these systems being available and functioning at all times. For example, if the system operating an autonomous vehicle fails to function when the vehicle is in operation, it could cause an accident, endangering its passengers, other drivers and vehicles, pedestrians and property.
+
+Highly available systems must be well-designed and thoroughly tested before they are used. Planning for one of these systems requires all components meet the desired availability standard. Data backup and failover capabilities play important roles in ensuring HA systems meet their availability goals. System designers must also pay close attention to the data storage and access technology they use.
+
+### Working process of Highly Availability(HA)
+It is impossible for systems to be available 100% of the time, so true high-availability systems generally strive for five nines as the standard of operational performance.
+
+The following three principles are used when designing HA systems to ensure high availability:
+
+* Single points of failure:
+ A single point of failure is a component that would cause the whole system to fail if it fails. If a business has one server running an application, that server is a single point of failure. Should that server fail, the application will be unavailable.
+
+* Reliable crossover:
+ Building redundancy into these systems is also important. Redundancy enables a backup component to take over for a failed one. When this happens, it's necessary to ensure reliable crossover or failover, which is the act of switching from component X to component Y without losing data or affecting performance.
+
+ * Failure detectability:
+ Failures must be visible and ideally, systems have built-in automation to handle the failure on their own. There should also be built-in mechanisms for avoiding common cause failures, where two or more systems or components fail simultaneously, likely from the same cause.
+
+To ensure high availability when many users access a system, load balancing becomes necessary. Load balancing automatically distributes workloads to system resources, such as sending different requests for data to different services hosted in a hybrid cloud architecture. The load balancer decides which system resource is most capable of efficiently handling which workload. The use of multiple load balancers to do this ensures no one resource is overwhelmed.
+
+The servers in an HA system are in clusters and organized in a tiered architecture to respond to requests from load balancers. If one server in the cluster fails, a replicated server in another cluster can handle the workload designated for the failed server. This sort of redundancy enables failover where a secondary component takes over a primary component's job when the first component fails, with minimal performance impact.
+
+The more complex a system is, the more difficult it is to ensure high availability because there are simply more points of failure in a complex system.
+
+Host intrusion detection systems (HIDS) run on independent hosts or devices on the network. A HIDS monitors the incoming and outgoing packets from the device only and will alert the administrator if suspicious or malicious activity is detected. It takes a snapshot of existing system files and compares it with the previous snapshot. If the analytical system files were edited or deleted, an alert is sent to the administrator to investigate. An example of HIDS usage can be seen on mission-critical machines, which are not expected to change their layout.
+
+
+![Information flow between highly availability severs and end user](https://cdn.ttgtmedia.com/rms/onlineimages/data_center-information_flow-f.png)
+
+
+#### Measurement of Highly availability:
+
+Availability can be measured relative to a system being 100% operational or never failing; meaning it has no outages. Typically, an availability percentage is calculated as follows:
+
+Availability = (minutes in a month - minutes of downtime)/(Minutes in a month)*100
+
+Three metrics used to measure availability include the following:
+
+* Mean time between failures (MTBF) is the expected time between two failures for the given system.
+* Mean downtime (MDT) is the average time that a system is nonoperational.
+* Recovery time objective (RTO), also known as estimated time of repair, is the total time a planned outage or recovery from an unplanned outage will take.
+
+These metrics can be used for in-house systems or by service providers to promise customers a certain level of service as stipulated in a service-level agreement (SLA). SLAs are contracts that specify the availability percentage customers can expect from a system or service.
+Availability metrics are subject to interpretation as to what constitutes the availability of the system or service to the end user. Even if systems continue to partially function, users may deem it unusable based on performance problems. Despite this level of subjectivity, availability metrics are formalized concretely in SLAs, which the service provider or system is responsible for satisfying.
+If a system or SLA provides 99.999% availability, the end user can expect the service to be unavailable for the following amounts of time:
+
+* Daily= 0.9 seconds
+* Weekly= 6.0 seconds
+* Monthly=26.3 seconds
+* Yearly= 5 minutes and 15.6 seconds
+
+### High Availability Cluster
+High availability clusters are groups of hosts (physical machines) that act as a single system and provide continuous availability. High availability clusters are used for mission critical applications like databases, eCommerce websites, and transaction processing systems.High availability clusters are typically used for load balancing, backup, and failover purposes. To successfully configure a high availability (HA) cluster, all hosts in the cluster must have access to the same shared storage. In any case of failure, a virtual machine (VM) on one host can failover to another host, without any downtime.The number of nodes in a high availability cluster can vary between two to dozens of nodes, but storage administrators should be aware that adding too many virtual machines and hosts to one HA cluster can make load balancing difficult.This article is a conceptual overview of high availability architectures, presented as part of our series of articles on AWS high availability.
+
+#### Working of Highly availability clustering
+High availability server clusters are groups of servers that support applications or services, which need to run reliably with minimal downtime.High availability architectures use redundant software performing a similar function, installed on multiple machines, so each of them can be used as a backup when another component fails. Without this clustering, if an application or website fails, the service will not be available until it is repaired.
+
+A highly available architecture prevents this situation using the following process:
+1. Detecting failure
+2. Performing failover of the application to another redundant host
+3. Restarting or repairing the failed server without requiring manual intervention
+
+#### The heartbeat technique
+High availability cluster servers typically use a replication method known as heartbeat. The purpose of this technique is to monitor cluster node health via a dedicated network connection. Each node in the cluster constantly advertises its availability to the other nodes by sending a “heartbeat” over the dedicated network link.One of the critical conditions that must be prevented in a high availability cluster is a “split brain”. Split brain happens when all private internal links are cut off at the same time, but the cluster nodes are still functioning.In this case, all nodes of the cluster may mistakenly assume that all other nodes are down, and try to start services that other nodes are already running. With multiple versions of the same service, all of which may be exposed to users, and can result in data corruption.
+
+#### High Availability Cluster Concepts
+1. Active/Active Cluster:
+A failover ensures that when a node loss occurs within a service group, it is quickly offset by other nodes in that location. This way, when a node fails, its IP address automatically moves to a standby node. You can use a network routing tool (for example, a load balancer) to redirect traffic from a failed node.In an active/passive model, initially, only one node serves customers, and continues working alone until it fails for some reason. At that point, both new and existing sessions are transferred to a backup or inactive node. Always add one more redundant component for each type of resource (n + 1 redundancy) to ensure you have sufficient resources for existing demand, while covering potential failure.
+
+2. Active/Active Cluster
+In a cluster with an active/active design, there are two or more nodes with the same configuration, each of which is directly accessed by clients.If one node fails, clients automatically connect to the other node and start working with it, as long as it has enough resources (because one node is now handling the load for two nodes). After restoring or replacing the first node, clients are again split between the two original nodes.The main benefit to running an active/active cluster is that you can effectively achieve node-network balance. A load balancer sends all client requests to available servers and monitors node-network activity. The load balancer moves traffic to nodes that can better handle that traffic, using predefined algorithms.The routing strategy can follow a round robin model, in which customers are distributed arbitrarily between the available nodes, or it may follow a weighing scheme, in which one node takes precedence over another by a certain percentage.In a cluster configuration combining active/active and active/passive, redundancy can be greatly improved by adding a passive node, alongside the active nodes. If a service cannot tolerate downtime, you should aim to combine active and passive high availability models.
 
 
 
