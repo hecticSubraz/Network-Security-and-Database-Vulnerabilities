@@ -1074,7 +1074,7 @@ The main difference between Intrusion Prevention System (IPS) with Intrusion Det
 
 # Day 13
 
-## Highly availability and High availability Clusters
+## Highl availability and High availability Clusters
  Today I learned about highly availability in information tehnology,how it works as well as how it  can be achieved through clustering, its measurement process, High available cluster's concept and its working process.
 
 ### High availability:
@@ -1083,7 +1083,7 @@ HA systems are used in situations and industries where it is critical the system
 
 Highly available systems must be well-designed and thoroughly tested before they are used. Planning for one of these systems requires all components meet the desired availability standard. Data backup and failover capabilities play important roles in ensuring HA systems meet their availability goals. System designers must also pay close attention to the data storage and access technology they use.
 
-### Working process of Highly Availability(HA)
+### Working process of High Availability(HA)
 It is impossible for systems to be available 100% of the time, so true high-availability systems generally strive for five nines as the standard of operational performance.
 
 The following three principles are used when designing HA systems to ensure high availability:
@@ -1109,7 +1109,7 @@ Host intrusion detection systems (HIDS) run on independent hosts or devices on t
 ![Information flow between highly availability severs and end user](https://cdn.ttgtmedia.com/rms/onlineimages/data_center-information_flow-f.png)
 
 
-#### Measurement of Highly availability:
+#### Measurement of High availability:
 
 Availability can be measured relative to a system being 100% operational or never failing; meaning it has no outages. Typically, an availability percentage is calculated as follows:
 
