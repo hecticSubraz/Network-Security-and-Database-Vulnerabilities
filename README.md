@@ -1075,7 +1075,7 @@ The main difference between Intrusion Prevention System (IPS) with Intrusion Det
 # Day 13
 
 ## High availability and High availability Clusters
- Today I learned about highly availability in information tehnology,how it works as well as how it  can be achieved through clustering, its measurement process, High available cluster's concept and its working process.
+ Today I learned about high availability in information tehnology,how it works as well as how it  can be achieved through clustering, its measurement process, High available cluster's concept and its working process.
 
 ### High availability:
 High availability (HA) is the ability of a system to operate continuously without failing for a designated period of time. HA works to ensure a system meets an agreed-upon operational performance level. In information technology (IT), a widely held but difficult-to-achieve standard of availability is known as five-nines availability, which means the system or product is available 99.999% of the time.
