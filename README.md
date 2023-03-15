@@ -1074,7 +1074,7 @@ The main difference between Intrusion Prevention System (IPS) with Intrusion Det
 
 # Day 13
 
-## Highl availability and High availability Clusters
+## High availability and High availability Clusters
  Today I learned about highly availability in information tehnology,how it works as well as how it  can be achieved through clustering, its measurement process, High available cluster's concept and its working process.
 
 ### High availability:
