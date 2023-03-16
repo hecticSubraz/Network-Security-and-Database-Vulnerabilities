@@ -1158,7 +1158,7 @@ In a cluster with an active/active design, there are two or more nodes with the 
 # Day 14
 
 ## Introduction to Database and Database Management System
- Today I learned about database and its types, able to  differentiate between database and spreadsheet, challanges of database, database software as well as Database Management system and use of database to improve business perfomance and decision making.
+ Today I learned about database and its types, able to  differentiate between database and spreadsheet, challenges of database, database software as well as Database Management system and use of database to improve business performance and decision making.
 
 ### Database:
 A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS). Together, the data and the DBMS, along with the applications that are associated with them, are referred to as a database system, often shortened to just database.
