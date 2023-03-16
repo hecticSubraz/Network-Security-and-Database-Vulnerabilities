@@ -15,6 +15,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 11](#Day-11)
 - [Day 12](#Day-12)
 - [Day 13](#Day-13)
+- [Day 14](#Day-14)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1152,6 +1153,96 @@ A failover ensures that when a node loss occurs within a service group, it is qu
 In a cluster with an active/active design, there are two or more nodes with the same configuration, each of which is directly accessed by clients.If one node fails, clients automatically connect to the other node and start working with it, as long as it has enough resources (because one node is now handling the load for two nodes). After restoring or replacing the first node, clients are again split between the two original nodes.The main benefit to running an active/active cluster is that you can effectively achieve node-network balance. A load balancer sends all client requests to available servers and monitors node-network activity. The load balancer moves traffic to nodes that can better handle that traffic, using predefined algorithms.The routing strategy can follow a round robin model, in which customers are distributed arbitrarily between the available nodes, or it may follow a weighing scheme, in which one node takes precedence over another by a certain percentage.In a cluster configuration combining active/active and active/passive, redundancy can be greatly improved by adding a passive node, alongside the active nodes. If a service cannot tolerate downtime, you should aim to combine active and passive high availability models.
 
 
+
+
+# Day 14
+
+## Introduction to Database and Database Management System
+ Today I learned about database and its types, able to  differentiate between database and spreadsheet, challanges of database, database software as well as Database Management system and use of database to improve business perfomance and decision making.
+
+### Database:
+A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS). Together, the data and the DBMS, along with the applications that are associated with them, are referred to as a database system, often shortened to just database.
+
+Data within the most common types of databases in operation today is typically modeled in rows and columns in a series of tables to make processing and data querying efficient. The data can then be easily accessed, managed, modified, updated, controlled, and organized. Most databases use structured query language (SQL) for writing and querying data.
+
+### Types of Database:
+There are many different types of databases. The best database for a specific organization depends on how the organization intends to use the data.
+
+#### Relational databases
+Relational databases became dominant in the 1980s. Items in a relational database are organized as a set of tables with columns and rows. Relational database technology provides the most efficient and flexible way to access structured information.
+
+#### Object-oriented databases
+Information in an object-oriented database is represented in the form of objects, as in object-oriented programming.
+
+#### Distributed databases
+A distributed database consists of two or more files located in different sites. The database may be stored on multiple computers, located in the same physical location, or scattered over different networks.
+
+#### Data warehouses
+A central repository for data, a data warehouse is a type of database specifically designed for fast query and analysis.
+
+#### NoSQL databases
+A NoSQL, or nonrelational database, allows unstructured and semistructured data to be stored and manipulated (in contrast to a relational database, which defines how all data inserted into the database must be composed). NoSQL databases grew popular as web applications became more common and more complex.
+
+#### Graph databases
+* A graph database stores data in terms of entities and the relationships between entities.
+* OLTP databases: An OLTP database is a speedy, analytic database designed for large numbers of transactions performed by multiple users.
+
+#### Open source databases
+An open source database system is one whose source code is open source; such databases could be SQL or NoSQL databases.
+
+#### Cloud databases
+A cloud database is a collection of data, either structured or unstructured, that resides on a private, public, or hybrid cloud computing platform. There are two types of cloud database models: traditional and database as a service (DBaaS). With DBaaS, administrative tasks and maintenance are performed by a service provider.
+
+#### Multimodel database
+Multimodel databases combine different types of database models into a single, integrated back end. This means they can accommodate various data types.
+
+#### Document/JSON database
+Designed for storing, retrieving, and managing document-oriented information, document databases are a modern way to store data in JSON format rather than rows and columns.
+
+#### Self-driving databases
+The newest and most groundbreaking type of database, self-driving databases (also known as autonomous databases) are cloud-based and use machine learning to automate database tuning, security, backups, updates, and other routine management tasks traditionally performed by database administrators.
+
+### Difference between database and spreadsheet:
+Databases and spreadsheets (such as Microsoft Excel) are both convenient ways to store information. The primary differences between the two are:
+
+* How the data is stored and manipulated
+* Who can access the data
+* How much data can be stored
+
+Spreadsheets were originally designed for one user, and their characteristics reflect that. They’re great for a single user or small number of users who don’t need to do a lot of incredibly complicated data manipulation. Databases, on the other hand, are designed to hold much larger collections of organized information—massive amounts, sometimes. Databases allow multiple users at the same time to quickly and securely access and query the data using highly complex logic and language.
+
+### Challanges of Database:
+Today’s large enterprise databases often support very complex queries and are expected to deliver nearly instant responses to those queries. As a result, database administrators are constantly called upon to employ a wide variety of methods to help improve performance. Some common challenges that they face include:
+
+* Absorbing significant increases in data volume.The explosion of data coming in from sensors, connected machines, and dozens of other sources keeps database administrators scrambling to manage and organize their companies’ data efficiently.
+
+ * Ensuring data security. Data breaches are happening everywhere these days, and hackers are getting more inventive. It’s more important than ever to ensure that data is secure but also easily accessible to users.
+
+* Keeping up with demand. In today’s fast-moving business environment, companies need real-time access to their data to support timely decision-making and to take advantage of new opportunities.
+
+* Managing and maintaining the database and infrastructure. Database administrators must continually watch the database for problems and perform preventative maintenance, as well as apply software upgrades and patches. As databases become more complex and data volumes grow, companies are faced with the expense of hiring additional talent to monitor and tune their databases.
+
+* Removing limits on scalability. A business needs to grow if it’s going to survive, and its data management must grow along with it. But it’s very difficult for database administrators to predict how much capacity the company will need, particularly with on-premises databases.
+
+* Ensuring data residency, data sovereignty, or latency requirements. Some organizations have use cases that are better suited to run on-premises. In those cases, engineered systems that are pre-configured and pre-optimized for running the database are ideal.
+
+Addressing all of these challenges can be time-consuming and can prevent database administrators from performing more strategic functions.
+
+### Database software
+Database software is used to create, edit, and maintain database files and records, enabling easier file and record creation, data entry, data editing, updating, and reporting. The software also handles data storage, backup and reporting, multi-access control, and security. Strong database security is especially important today, as data theft becomes more frequent. Database software is sometimes also referred to as a “database management system” (DBMS).
+
+Database software makes data management simpler by enabling users to store data in a structured form and then access it. It typically has a graphical interface to help create and manage the data and, in some cases, users can construct their own databases by using database software.
+
+### Database Management System:
+A database typically requires a comprehensive database software program known as a database management system (DBMS). A DBMS serves as an interface between the database and its end users or programs, allowing users to retrieve, update, and manage how the information is organized and optimized. A DBMS also facilitates oversight and control of databases, enabling a variety of administrative operations such as performance monitoring, tuning, and backup and recovery.
+
+Some examples of popular database software or DBMSs include MySQL, Microsoft Access, Microsoft SQL Server, FileMaker Pro, Oracle Database, and dBASE.
+
+### Use of  databases to improve business performance and decision-making
+
+With massive data collection from the Internet of Things transforming life and industry across the globe, businesses today have access to more data than ever before. Forward-thinking organizations can now use databases to go beyond basic data storage and transactions to analyze vast quantities of data from multiple systems. Using database and other computing and business intelligence tools, organizations can now leverage the data they collect to run more efficiently, enable better decision-making, and become more agile and scalable. Optimizing access and throughput to data is critical to businesses today because there is more data volume to track. It’s critical to have a platform that can deliver the performance, scale, and agility that businesses need as they grow over time.
+
+The self-driving database is poised to provide a significant boost to these capabilities. Because self-driving databases automate expensive, time-consuming manual processes, they free up business users to become more proactive with their data. By having direct control over the ability to create and use databases, users gain control and autonomy while still maintaining important security standards.
 
 
 
