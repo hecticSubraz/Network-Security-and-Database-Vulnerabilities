@@ -16,6 +16,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 12](#Day-12)
 - [Day 13](#Day-13)
 - [Day 14](#Day-14)
+- [Day 15](#Day-15)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1243,6 +1244,111 @@ Some examples of popular database software or DBMSs include MySQL, Microsoft Acc
 With massive data collection from the Internet of Things transforming life and industry across the globe, businesses today have access to more data than ever before. Forward-thinking organizations can now use databases to go beyond basic data storage and transactions to analyze vast quantities of data from multiple systems. Using database and other computing and business intelligence tools, organizations can now leverage the data they collect to run more efficiently, enable better decision-making, and become more agile and scalable. Optimizing access and throughput to data is critical to businesses today because there is more data volume to track. It’s critical to have a platform that can deliver the performance, scale, and agility that businesses need as they grow over time.
 
 The self-driving database is poised to provide a significant boost to these capabilities. Because self-driving databases automate expensive, time-consuming manual processes, they free up business users to become more proactive with their data. By having direct control over the ability to create and use databases, users gain control and autonomy while still maintaining important security standards.
+
+
+
+# Day 15
+
+## Data source, Data warehouse and Big Data
+ Today I learned about data source, how does it work, its purpose, as  well as data warehouse,its benefits and architecture,big data, working of big Data and its importance. 
+
+### Data Source:
+A data source is the location where data that is being used originates from.A data source may be the initial location where data is born or where physical information is first digitized, however even the most refined data may serve as a source, as long as another process accesses and utilizes it. Concretely, a data source may be a database, a flat file, live measurements from physical devices, scraped web data, or any of the myriad static and streaming data services which abound across the internet.
+
+### Working process of Data Source:
+Data sources are used in a variety of ways. Data can be transported thanks to diverse network protocols, such as the well-known File Transfer Protocol (FTP) and HyperText Transfer Protocol (HTTP), or any of the myriad Application Programming Interfaces (APIs) provided by websites, networked applications, and other services. 
+
+Many platforms use data sources with FTP addresses to specify the location of data needed to be imported. For example, in the Adobe Analytics platform, a file data source is uploaded to a server using an FTP client, then a service utilizes this source to move and process the relevant data automatically.
+
+SFTP (The S stands for Secure or SSH) is used when usernames and passwords need to be obfuscated and content encrypted, or FTPS may alternatively be used by adding Transport Layer Security (TLS) to FTP, achieving the same goal. 
+
+Meanwhile, many and diverse APIs are now provided to manage data sources and how they are used in applications. APIs are used to programmatically link applications to data sources, and typically provide more customization and a more versatile collection of access methods. For example, Spark provides an API with abstract implementations for representing and connecting to data sources, from barebones but extensible classes for generic relational sources, to detailed implementations for hard-coded JDBC connections.
+
+Other protocols for moving data from sources to destinations, especially on the web, include NFS, SMB, SOAP, REST, and WebDAV. These protocols are often used within APIs (and some APIs themselves make use of other APIs internally), within fully featured data applications, or as standalone transfer processes. Each have characteristic features and security concerns which should be considered for any data transfer.
+
+### Purpose of a data source
+Ultimately, data sources are intended to help users and applications connect to and move data to where it needs to be. They gather relevant technical information in one place and hide it so data consumers can focus on processing and identify how to best utilize their data.
+
+The purpose here is to package connection information in a more easily understood and user-friendly format. This makes data sources critical for more easily integrating disparate systems, as they save shareholders from the need to deal with and troubleshoot complex but low-level connection information.
+
+And although this connection information is hidden, it is always accessible when necessary. Additionally, this information is stored in consistent locations and formats which can ease other processes such as migrations or planned system structural changes
+
+### Data warehouses
+A data warehouse is a type of data management system that is designed to enable and support business intelligence (BI) activities, especially analytics. Data warehouses are solely intended to perform queries and analysis and often contain large amounts of historical data. The data within a data warehouse is usually derived from a wide range of sources such as application log files and transaction applications.
+
+A data warehouse centralizes and consolidates large amounts of data from multiple sources. Its analytical capabilities allow organizations to derive valuable business insights from their data to improve decision-making. Over time, it builds a historical record that can be invaluable to data scientists and business analysts. Because of these capabilities, a data warehouse can be considered an organization’s “single source of truth.”
+A typical data warehouse often includes the following elements:
+
+* A relational database to store and manage data
+* An extraction, loading, and transformation (ELT) solution for preparing the data for analysis
+* Statistical analysis, reporting, and data mining capabilities
+* Client analysis tools for visualizing and presenting data to business users
+* Other, more sophisticated analytical applications that generate actionable information by applying data science and artificial intelligence (AI) algorithms, or graph and spatial features that enable more kinds of analysis of data at scale
+
+### Benifits of Data Warehouse 
+Data warehouses offer the overarching and unique benefit of allowing organizations to analyze large amounts of variant data and extract significant value from it, as well as to keep a historical record.
+
+Four unique characteristics (described by computer scientist William Inmon, who is considered the father of the data warehouse) allow data warehouses to deliver this overarching benefit. According to this definition, data warehouses are
+
+* Subject-oriented 
+They can analyze data about a particular subject or functional area (such as sales).
+* Integrated
+Data warehouses create consistency among different data types from disparate sources.
+* Nonvolatile
+Once data is in a data warehouse, it’s stable and doesn’t change.
+* Time-variant
+ Data warehouse analysis looks at change over time.
+
+A well-designed data warehouse will perform queries very quickly, deliver high data throughput, and provide enough flexibility for end users to “slice and dice” or reduce the volume of data for closer examination to meet a variety of demands—whether at a high level or at a very fine, detailed level. The data warehouse serves as the functional foundation for middleware BI environments that provide end users with reports, dashboards, and other interfaces.
+
+#### Data warehouse architecture
+The architecture of a data warehouse is determined by the organization’s specific needs. Common architectures include
+
+* Simple
+All data warehouses share a basic design in which metadata, summary data, and raw data are stored within the central repository of the warehouse. The repository is fed by data sources on one end and accessed by end users for analysis, reporting, and mining on the other end.
+* Simple with a staging area
+ Operational data must be cleaned and processed before being put in the warehouse. Although this can be done programmatically, many data warehouses add a staging area for data before it enters the warehouse, to simplify data preparation.
+* Hub and spoke
+Adding data marts between the central repository and end users allows an organization to customize its data warehouse to serve various lines of business. When the data is ready for use, it is moved to the appropriate data mart.
+* Sandboxes
+Sandboxes are private, secure, safe areas that allow companies to quickly and informally explore new datasets or ways of analyzing data without having to conform to or comply with the formal rules and protocol of the data warehouse.
+
+### Big Data
+Big data is a combination of structured, semistructured and unstructured data collected by organizations that can be mined for information and used in machine learning projects, predictive modeling and other advanced analytics applications.
+
+Systems that process and store big data have become a common component of data management architectures in organizations, combined with tools that support big data analytics uses. Big data is often characterized by the three V's:
+
+* the large volume of data in many environments;
+* the wide variety of data types frequently stored in big data systems; and
+* the velocity at which much of the data is generated, collected and processed.
+
+### working of Big Data
+Big data gives you new insights that open up new opportunities and business models. Getting started involves three key actions:
+
+1.  Integrate
+Big data brings together data from many disparate sources and applications. Traditional data integration mechanisms, such as extract, transform, and load (ETL) generally aren’t up to the task. It requires new strategies and technologies to analyze big data sets at terabyte, or even petabyte, scale.
+
+During integration, you need to bring in the data, process it, and make sure it’s formatted and available in a form that your business analysts can get started with.
+
+2.  Manage
+Big data requires storage. Your storage solution can be in the cloud, on premises, or both. You can store your data in any form you want and bring your desired processing requirements and necessary process engines to those data sets on an on-demand basis. Many people choose their storage solution according to where their data is currently residing. The cloud is gradually gaining popularity because it supports your current compute requirements and enables you to spin up resources as needed.
+
+3.  Analyze
+Your investment in big data pays off when you analyze and act on your data. Get new clarity with a visual analysis of your varied data sets. Explore the data further to make new discoveries. Share your findings with others. Build data models with machine learning and artificial intelligence. Put your data to work.
+
+### Importance of Big Data
+Companies use big data in their systems to improve operations, provide better customer service, create personalized marketing campaigns and take other actions that, ultimately, can increase revenue and profits. Businesses that use it effectively hold a potential competitive advantage over those that don't because they're able to make faster and more informed business decisions.
+
+For example, big data provides valuable insights into customers that companies can use to refine their marketing, advertising and promotions in order to increase customer engagement and conversion rates. Both historical and real-time data can be analyzed to assess the evolving preferences of consumers or corporate buyers, enabling businesses to become more responsive to customer wants and needs.
+
+Big data is also used by medical researchers to identify disease signs and risk factors and by doctors to help diagnose illnesses and medical conditions in patients. In addition, a combination of data from electronic health records, social media sites, the web and other sources gives healthcare organizations and government agencies up-to-date information on infectious disease threats or outbreaks.
+
+Here are some more examples of how big data is used by organizations:
+
+* In the energy industry, big data helps oil and gas companies identify potential drilling locations and monitor pipeline operations; likewise, utilities use it to track electrical grids.
+* Financial services firms use big data systems for risk management and real-time analysis of market data.
+* Manufacturers and transportation companies rely on big data to manage their supply chains and optimize delivery routes.
+* Other government uses include emergency response, crime prevention and smart city initiatives
 
 
 
