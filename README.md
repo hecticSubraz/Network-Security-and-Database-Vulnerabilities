@@ -1250,7 +1250,7 @@ The self-driving database is poised to provide a significant boost to these capa
 # Day 15
 
 ## Data source, Data warehouse and Big Data
- Today I learned about data source, how does it work, its purpose, as  well as data warehouse,its benefits and architecture,big data, working of big Data and its importance. 
+ Today I learned about data source, how does it work, its purpose, data warehouse,its benefits and architecture as well as big data, working of big Data and its importance. 
 
 ### Data Source:
 A data source is the location where data that is being used originates from.A data source may be the initial location where data is born or where physical information is first digitized, however even the most refined data may serve as a source, as long as another process accesses and utilizes it. Concretely, a data source may be a database, a flat file, live measurements from physical devices, scraped web data, or any of the myriad static and streaming data services which abound across the internet.
