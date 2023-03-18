@@ -17,6 +17,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 13](#Day-13)
 - [Day 14](#Day-14)
 - [Day 15](#Day-15)
+- [Day 16](#Day-16)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1353,6 +1354,183 @@ Here are some more examples of how big data is used by organizations:
 
 
 
+# Day 16
+
+## Data model types
+ Today I learned about structured data, semi-structured data,unstructured data and their Characteristics, advantages as well as their disadvantages.
+
+### Structured Data:
+Structured data refers to data that is organized and formatted in a specific way to make it easily readable and understandable by both humans and machines. This is typically achieved through the use of a well-defined schema or data model, which provides a structure for the data.
+
+Structured data is typically found in databases and spreadsheets, and is characterized by its organized nature. Each data element is typically assigned a specific field or column in the schema, and each record or row represents a specific instance of that data. For example, in a customer database, each record might contain fields for the customer’s name, address, phone number, and email address.
+Structured data is highly valuable because it can be easily searched, queried, and analyzed using various tools and techniques. This makes it an ideal format for data-driven applications such as business intelligence and analytics, as well as for machine learning and artificial intelligence applications.
+Examples of structured data formats include relational databases, XML, and JSON. In contrast, unstructured data, such as text documents or images, do not have a predefined schema or structure, and can be more difficult to analyze and interpret.
+
+Structured data is the data which conforms to a data model, has a well define structure, follows a consistent order and can be easily accessed and used by a person or a computer program. Structured data is usually stored in well-defined schemas such as Databases. It is generally tabular with column and rows that clearly define its attributes. SQL (Structured Query language) is often used to manage structured data stored in databases. 
+
+#### Characteristics of Structured Data: 
+* Data confirms to a data model and has easily identifiable structure
+* Data is stored in the form of rows and columns Example : Database
+* Data is well organised so, Definition, Format and Meaning of data is explicitly known
+* Data resides in fixed fields within a record or file
+* Similar entities are grouped together to form relations or classes
+* Entities in the same group have same attributes
+* Easy to access and query, So data can be easily used by other programs
+* Data elements are addressable, so efficient to analyse and process
+
+#### Sources of structured DataSQL Databases
+* Spreadsheets such as Excel
+* OLTP Systems
+* Online forms
+* Sensors such as GPS or RFID tags
+* Network and Web server logs
+* Medical devices
+
+#### Advantages of structured Data:
+
+* Easy to understand and use: 
+Structured data has a well-defined schema or data model, making it easy to understand and use. This allows for easy data retrieval, analysis, and reporting.
+
+* Consistency:
+ The well-defined structure of structured data ensures consistency and accuracy in the data, making it easier to compare and analyze data across different sources.
+
+* Efficient storage and retrieval: 
+Structured data is typically stored in relational databases, which are designed to efficiently store and retrieve large amounts of data. This makes it easy to access and process data quickly.
+
+* Enhanced data security: Structured data can be more easily secured than unstructured or semi-structured data, as access to the data can be controlled through database security protocols.
+
+* Clear data lineage: Structured data typically has a clear lineage or history, making it easy to track changes and ensure data quality.
+
+
+
+#### Disadvantages of Structured Data:
+* Inflexibility:
+ Structured data can be inflexible in terms of accomodating new types of data, as any changes to the schema or data model require significant changes to the database.
+
+* Limited complexity: 
+Structured data is often limited in terms of the complexity of relationships between data entities. This can make it difficult to model complex real-world scenarios.
+
+* Limited context: 
+Structured data often lacks the additional context and information that unstructured or semi-structured data can provide, making it more difficult to understand the meaning and significance of the data.
+
+* Expensive: 
+Structured data requires the use of relational databases and related technologies, which can be expensive to implement and maintain.
+
+* Data quality:
+ The structured nature of the data can sometimes lead to missing or incomplete data, or data that does not fit cleanly into the defined schema, leading to data quality issues.
+
+Overall, structured data offers many advantages in terms of ease of use, consistency, and security, but also presents some limitations in terms of flexibility and complexity that need to be carefully considered when designing and implementing data management systems.
+
+
+### Semi-Structured Data:
+Semi-structured data is a type of data that is not purely structured, but also not completely unstructured. It contains some level of organization or structure, but does not conform to a rigid schema or data model, and may contain elements that are not easily categorized or classified.
+
+1. Semi-structured data is typically characterized by the use of metadata or tags that provide additional information about the data elements. For example, an XML document might contain tags that indicate the structure of the document, but may also contain additional tags that provide metadata about the content, such as author, date, or keywords.
+
+2. Other examples of semi-structured data include JSON, which is commonly used for exchanging data between web applications, and log files, which often contain a mix of structured and unstructured data.
+
+Semi-structured data is becoming increasingly common as organizations collect and process more data from a variety of sources, including social media, IoT devices, and other unstructured sources. While semi-structured data can be more challenging to work with than strictly structured data, it offers greater flexibility and adaptability, making it a valuable tool for data analysis and management.
+
+Semi-structured data is data that does not conform to a data model but has some structure. It lacks a fixed or rigid schema. It is the data that does not reside in a rational database but that have some organizational properties that make it easier to analyze. With some processes, we can store them in the relational database. 
+
+#### Characteristics:
+* Data does not conform to a data model but has some structured.  
+* Data can not be stored in the form of rows and columns as in Databases
+* Semi-structured data contains tags and elements (Metadata) which is used to group data and describe how the data is stored
+* Similar entities are grouped together and organized in a hierarchy
+* Entities in the same group may or may not have the same attributes or properties
+* Does not contain sufficient metadata which makes automation and management of data difficult
+* Size and type of the same attributes in a group may differ
+* Due to lack of a well-defined structure, it can not used by computer programs easily
+
+#### Sources:
+* E-mails
+* XML and other markup languages
+* Binary executables
+* TCP/IP packets
+* Zipped files
+* Integration of data from different sources
+* Web pages
+
+#### Advantages:
+* The data is not constrained by a fixed schema
+* Flexible i.e Schema can be easily changed.
+Data is portable
+* It is possible to view structured data as semi-structured data
+* Its supports users who can not express their need in SQL
+* It can deal easily with the heterogeneity of sources.
+
+
+* Flexibility: 
+
+Semi-structured data provides more flexibility in terms of data storage and management, as it can accommodate data that does not fit into a strict, predefined schema. This makes it easier to incorporate new types of data into an existing database or data processing pipeline.
+* Scalability:
+ Semi-structured data is particularly well-suited for managing large volumes of data, as it can be stored and processed using distributed computing systems, such as Hadoop or Spark, which can scale to handle massive amounts of data.
+* Faster data processing: 
+Semi-structured data can be processed more quickly than traditional structured data, as it can be indexed and queried in a more flexible way. This makes it easier to retrieve specific subsets of data for analysis and reporting.
+* Improved data integration: 
+Semi-structured data can be more easily integrated with other types of data, such as unstructured data, making it easier to combine and analyze data from multiple sources.
+* Richer data analysis: 
+Semi-structured data often contains more contextual information than traditional structured data, such as metadata or tags. This can provide additional insights and context that can improve the accuracy and relevance of data analysis.
+
+#### Disadvantages:
+* Lack of fixed, rigid schema make it difficult in storage of the data
+* Interpreting the relationship between data is difficult as there is no separation of the schema and the data.
+* Queries are less efficient as compared to structured data.
+
+* Complexity:
+ Semi-structured data can be more complex to manage and process than structured data, as it may contain a wide variety of formats, tags, and metadata. This can make it more difficult to develop and maintain data models and processing pipelines.
+
+* Lack of standardization:
+ Semi-structured data often lacks the standardization and consistency of structured data, which can make it more difficult to ensure data quality and accuracy. This can also make it harder to compare and analyze data across different sources.
+
+* Reduced performance: 
+Processing semi-structured data can be more resource-intensive than processing structured data, as it often requires more complex parsing and indexing operations. This can lead to reduced performance and longer processing times.
+
+* Limited tooling: 
+While there are many tools and technologies available for working with structured data, there are fewer options for working with semi-structured data. This can make it more challenging to find the right tools and technologies for a particular use case.
+
+* Data security: 
+Semi-structured data can be more difficult to secure than structured data, as it may contain sensitive information in unstructured or less-visible parts of the data. This can make it more challenging to identify and protect sensitive information from unauthorized access.
+
+
+Overall, while semi-structured data offers many advantages in terms of flexibility and scalability, it also presents some challenges and limitations that need to be carefully considered when designing and implementing data processing and analysis pipelines.
+
+### Unstructured Data:
+Unstructured data is the data which does not conforms to a data model and has no easily identifiable structure such that it can not be used by a computer program easily. Unstructured data is not organised in a pre-defined manner or does not have a pre-defined data model, thus it is not a good fit for a mainstream relational database. 
+
+#### Characteristics:
+
+* Data neither conforms to a data model nor has any structure.
+* Data can not be stored in the form of rows and columns as in Databases
+* Data does not follows any semantic or rules
+* Data lacks any particular format or sequence
+* Data has no easily identifiable structure
+* Due to lack of identifiable structure, it can not used by computer programs easily
+
+#### Sources of Unstructured Data:  
+
+* Web pages
+* Images (JPEG, GIF, PNG, etc.)
+* Videos
+* Memos
+* Reports
+* Word documents and PowerPoint presentations
+* Surveys
+
+#### Advantages:
+* Its supports the data which lacks a proper format or sequence
+* The data is not constrained by a fixed schema
+* Very Flexible due to absence of schema.
+* Data is portable
+* It is very scalable
+* It can deal easily with the heterogeneity of sources.
+* These type of data have a variety of business intelligence and analytics applications.
+
+#### Disadvantages:
+* It is difficult to store and manage unstructured data due to lack of schema and structure
+* Indexing the data is difficult and error prone due to unclear structure and not having pre-defined attributes. Due to which search results are not very accurate.
+* Ensuring security to data is difficult task.
 
 
 
