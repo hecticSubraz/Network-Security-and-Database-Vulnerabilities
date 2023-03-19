@@ -18,6 +18,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 14](#Day-14)
 - [Day 15](#Day-15)
 - [Day 16](#Day-16)
+- [Day 17](#Day-17)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1531,6 +1532,68 @@ Unstructured data is the data which does not conforms to a data model and has no
 * It is difficult to store and manage unstructured data due to lack of schema and structure
 * Indexing the data is difficult and error prone due to unclear structure and not having pre-defined attributes. Due to which search results are not very accurate.
 * Ensuring security to data is difficult task.
+
+
+
+# Day 17
+
+## Crown Jewels and its securing method
+ I continued my learning and learned about crown jewels in database, how to identify the crown jewels data of company and  different types of methods to secure crown jewels of the company .
+
+### Crown Jewels:
+In the context of database management, the term "crown jewels" refers to the most critical and sensitive data within an organization that is considered essential to its operations or that has significant value. This data is typically highly confidential and may include things like financial records, intellectual property, customer information, trade secrets, or other types of proprietary data.
+
+The term "crown jewels" is often used to describe the subset of data that requires the highest level of security and protection within a database. This data is typically subject to strict access controls and encryption measures to prevent unauthorized access or theft. Protecting the crown jewels is essential to ensuring the overall security and integrity of the database and the organization that relies on it.
+
+#### Method to identify the Crown jewels of Company
+* Identify = Your sensetive and high value data
+* Discover = the location and accessibility of your sensetive data
+* classify = data according to its value to the organization
+* Secure   = employ security control and protection measures
+* Monitor  = Measure and envolve security practices 
+
+Using data classification as part of a strategy to secure corporate data assets is sometimes referred to as ‘locking up the crown jewels’. But data security neither starts nor ends with the act of controlling access to information. Nor should a security policy be limited to protecting only the most valuable data; even less critical information can damage the business if it’s lost or leaked at the wrong time.
+
+First, you need to build a strong foundation of knowledge around your data, to understand exactly what you hold and the potential risks to its security. Picture your organisation as the Tower of London. If you don’t know where your crown jewels (and less sparkly assets) are you’ll end up locking every door – or leaving the wrong doors open, exposing them to risk.
+
+This process begins with identifying the types of data that are of greatest importance to the business, so you can pinpoint where you need to focus protection and controls.
+
+Your most valuable and confidential data (your crown jewels) might include:
+
+* Data assets – such as the information on a CRM database
+* Business-critical documents including strategic plans and agreements
+* Documents or information that are subject to regulations
+* Intellectual property (IP), such as product designs and technical specs
+* Personal information – for instance employees’ details.
+
+More often than not, however, a company’s most vulnerable point will not be its crown jewels; it’s likely they’ll already have been recognised and heavily protected. It’s the more everyday sensitive data that people don’t think about, like customer lists, contracts, or time sensitive documents such as company results and press releases that are most likely to be leaked or lost. This data must also be identified and protected.
+
+### Securing methods of Crown Jewels:
+
+1. Locate your organization’s most critical data:
+
+Determining where your most critical data lives is a necessary first step in protecting it. The most critical data is rarely well defined within organizations, he says. Some companies may have created a data protection policy or classification system with different categories for sensitive and confidential data. But a lot of companies haven’t gone through an exercise to determine what is what because it’s too cumbersome.
+Even the task of finding highly valuable data can be complex we can’t just do a quick search and gather all that data. “Cloud computing makes it very difficult to find because it could be in someone’s OneDrive, or in Azure, or elsewhere on the cloud. We have to search multiple platforms to get a true idea of where sensitive data is located and which resources require the highest levels of protection.
+
+2. Assess the impact of a potential data leak:
+
+After locating its crown jewels, organizations should next weigh the criticality of each asset. They should find that  If a particular asset or endpoint is compromised, what is the possible impact?
+“Asset criticality is about understanding your applications, your servers, and your endpoints and giving them a different weight in terms of potential risk for a data leak. That weighting can factor into a company’s overall cyber risk scoring system.
+
+3. Increase your security protections:
+Added defenses can take a variety of forms. They include encrypting certain documents, deleting data from vulnerable locations, locking down devices so personal USB drives can’t be used to copy data, and restricting access to particular information.
+Identifying who has access to certain data can be very hard. You might have a classification that says anything with credit card information needs to be kept internal.
+Mature organizations may maintain a list of people who can access certain files, while other companies might enable employees to email a document only to business partners or vendors. Sending to other recipients would be automatically blocked. As they lock down assets, organizations must think strategically about how to make tradeoffs between the cost of protection and leaders’ comfort with a particular level of risk.
+
+
+4. Continually monitor sensitive data:
+
+Once the crown jewels have been identified, assessed, and protected, organizations should monitor them. “Monitoring tools are the eyes and ears of the activity happening in your organization from a data perspective—who’s accessing what, how often they’re accessing it, and whether they can access it at all.
+Data monitoring provides a deeper view into how files are being accessed and used, which can be especially important when complying with government regulations.You need to be able to log every single change that happens for a specific file or set of files to meet compliance.When selecting a monitoring tool, organizations should evaluate its flexibility in creating custom definitions for an organization’s sensitive data—including particular keywords or project names for example. Tools should also deploy the latest AI-powered machine learning (ML) capabilities to get better and better at minimizing the number of false-positive security alerts that can overwhelm IT staff.
+
+5. Make security key to your culture:
+An organization’s security culture determines how well it protects its most valuable data. But at some companies, adopting effective security measures falls second to convenience.A lot of organizations don’t have in place the controls they need because employees will say that something like two-factor authentication is extremely inconvenient for them or their customers.
+
 
 
 
