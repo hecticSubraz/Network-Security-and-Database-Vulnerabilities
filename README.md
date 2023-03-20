@@ -19,6 +19,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 15](#Day-15)
 - [Day 16](#Day-16)
 - [Day 17](#Day-17)
+- [Day 18](#Day-18)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1594,6 +1595,122 @@ Data monitoring provides a deeper view into how files are being accessed and use
 5. Make security key to your culture:
 An organization’s security culture determines how well it protects its most valuable data. But at some companies, adopting effective security measures falls second to convenience.A lot of organizations don’t have in place the controls they need because employees will say that something like two-factor authentication is extremely inconvenient for them or their customers.
 
+
+# Day 18
+
+## Leveraging security and relational database
+Today i learned the meaning of  leveraging security, how a company can leverage its security and reduce the risk of security breaches as well as cyber attacks, Relational database, its working process,benefits and its drawbacks.
+
+### Leveraging security:
+Leveraging security refers to the practice of using security measures or tools to increase the effectiveness or efficiency of other security measures or processes. This can include using technologies such as firewalls, intrusion detection systems, and encryption to protect sensitive data, networks, or systems, and also incorporating security best practices into organizational policies and procedures.
+
+By leveraging security, organizations can enhance their overall security posture and reduce the likelihood of security breaches or cyber attacks. It involves identifying potential weaknesses or vulnerabilities and implementing strategies to mitigate or prevent them.
+
+In essence, leveraging security is about maximizing the value of security investments and resources by ensuring that they work together effectively to provide comprehensive protection against security threats.
+
+### Methods to leverage security:
+There are several methods that a company can use to leverage security and enhance their overall security posture. Here are a few examples:
+
+* Implementing a Security Framework:
+ A security framework provides a structure for organizing and implementing security measures across an organization. Frameworks such as NIST, ISO, or CIS Controls provide a roadmap for identifying and addressing security risks and vulnerabilities.
+
+* Conducting Regular Security Audits: 
+Regular security audits can help identify potential security weaknesses and vulnerabilities. Companies can use the results of these audits to develop and implement strategies for mitigating risks and improving security measures.
+
+* Using Encryption:
+ Encryption is a powerful tool that can help protect sensitive data from unauthorized access. Companies can use encryption to secure data both at rest and in transit.
+
+* Implementing Two-Factor Authentication (2FA): 
+2FA is a security measure that requires users to provide two forms of authentication before accessing a system or application. This can include a password and a biometric factor such as a fingerprint or facial recognition.
+
+* Providing Employee Training: 
+Employee training can help raise awareness of security risks and best practices. Companies can provide training on topics such as phishing scams, password security, and data handling.
+
+* Monitoring and Responding to Security Threats: 
+Companies should implement a system for monitoring security threats and responding to incidents in a timely and effective manner. This can include using threat intelligence tools and having an incident response plan in place.
+
+By leveraging these methods and others, companies can strengthen their security posture and reduce the risk of security breaches and cyber attacks.
+
+### Relational Database:
+
+A relational database is a type of database that stores and allows access to data. These types of databases are referred to as "relational" because the data items within them have pre-determined relationships with one another. Data in a relational database is stored in tables. The tables are connected by unique IDs or "keys." When a user needs to access specific information, they can use a key to access all the tables of data that have been pre-determined to be related to that key.
+
+Suppose you're working for a company that sells clothes online. Your organization uses a relational database to manage data related to shipping, customer information, inventory, and website traffic. You have a key to this database that accesses all tables related to shipping, and you need to find out if you have enough inventory to ship out last week's orders.
+
+Since the relational database recognizes that there's a relationship between shipping information and inventory, you can use your key to access inventory numbers and shipping requests to compare data. During this request, you won't access any information about website traffic because your key only accesses the tables of data that are related to shipping.
+
+#### Working process of Relational Database:
+
+* Relational Database Management Systems (RDBMS):
+An RDBMS is a program that enables you to create, update, and perform administrative tasks with a relational database. The difference between a relational database and an RDBMS is that relational databases organize information based on a relational data model. In contrast, RDBMS is database software that allows users to maintain the database. Common examples of relational database management systems include MySQL, Microsoft SQL Server, and Oracle Database. 
+
+* Processing requests and retrieving information:
+In an RDBMS, users input SQL queries to retrieve the data needed for specific job functions. SQL stands for Structured Query Language. It's a standardized way to request information from relational databases.
+
+ Example: It's similar to the way you might type your question into Google much differently than you'd ask a friend for the same information. Instead of saying, "what's that funny rap song from the Sonic the Hedgehog 2 movie?" you might type in "Sonic the Hedgehog 2 soundtrack list." This formatting change makes it easier for the algorithm to pull the data you need immediately.
+
+ * Organizing related data points:
+
+ As mentioned above, the data in a relational database is stored in tables. Each row in a table has an access key, and each column has data attributes. The attributes have values that help users understand the relationships between data entries.
+
+ Example: A relational database for a shoe store has two tables with related data. In the first single table, each record includes columns containing the customer’s billing and shipping information. Each row is assigned a key. The second single table contains the customer's order information (product, size, quantity). The keys from the first table are listed alongside the order information in the second table because the database recognizes their relationship to one another. This setup makes it easy for the warehouse to pull the correct product from the shelf and ship it to the right customer. 
+
+
+ #### Features of Relational Database:
+ These database types are used for processing and managing transactions. They are often used in retail, banking, and entertainment industries, where an exact amount (of money, tickets, or product) is withdrawn from one location or account and deposited into another. Transactions like these have properties that can be represented by the acronym ACID, which stands for:
+ 
+ 1. Atomicity: 
+ All parts of a transaction are executed completely and 
+ successfully, or else the entire transaction fails. 
+
+2. Consistency: 
+Data remains consistent throughout the relational database. Data integrity, or the accuracy and completeness of the data at hand, is enforced in relational databases with integrity constraints (similar to rule enforcers).
+
+3. Isolation:
+ Each transaction is independent of other transactions. Data from one record does not spill onto another, so it is secure.
+
+4. Durability: 
+Even if the system fails, data from completed transactions are safely stored.
+
+By taking the relational approach to data queries, analysts can perform specific functions to obtain the information they need to organize query results by name, date, size, and location. This relational model also means that the logical data structures, such as tables and indexes, are completely separate from physical storage.
+
+#### Benefits of Relational Database:
+A relational database’s main benefit is the ability to connect data from different tables to obtain useful insight. This approach helps organizations of all sizes and industries decipher the relationships between different data sets from various departments. How data is structured within a relational database can also be useful for managing access permissions. Since the relationships between data points are pre-determined and require a unique ID to reference, users only obtain relevant, pre-screened information.
+
+Here are a few more Benefits of relational databases:
+
+* Simple and centralized database: 
+Relational databases are simple. Toggling between tables provides a wealth of information that can be used for various purposes. Plus, ERP systems are built on relational databases, so they help users manage clients, inventory, and much more.
+
+* Easy to use:
+ Many companies use relational databases, and ERP, to organize and manage large amounts of data. Their continued use helps to drive improvements to these systems—such as migrating to the cloud. Using SQL, users can easily navigate data sets to retrieve, filter, and ideate the information they need. 
+
+* Save time and money: 
+By using relational databases, companies can stay organized and efficient. The unique IDs help eliminate duplicate information, whether it is tracking a customer’s order or museum visitors. Instead of taking time to input logs of customer data, a relational database reduces redundancy, thus saving employees time. Companies can save money by allocating that labor elsewhere.
+
+#### Disadvantages or Drawbacks of Relational Database:
+
+Although relational databases are widely used and have many advantages, they also have some disadvantages, which include:
+
+* Complexity: 
+Relational databases can be complex to design and maintain, especially for large and complex applications. Designing a database schema that accurately represents the data and relationships can require significant expertise and experience.
+
+* Scalability: 
+Relational databases can struggle to handle extremely large data sets or high levels of traffic. Scaling a relational database to meet the needs of a growing application can be challenging and expensive.
+
+* Performance: 
+The complexity of relational databases can impact performance, especially for complex queries involving multiple tables. As the size of the database grows, performance can degrade, and optimization may be required.
+
+* Cost: 
+Relational databases can be expensive to license and maintain, especially for larger applications with high levels of traffic.
+
+* Limited Flexibility: 
+The structure of a relational database can be rigid, and changes to the schema can be difficult to implement. Adding or modifying data attributes can require significant effort and can impact existing applications that rely on the database schema.
+
+* Data Integrity: 
+Although relational databases provide robust data integrity and consistency through their use of foreign keys and other constraints, this can also limit flexibility and create challenges when dealing with data that does not fit neatly into a relational schema.
+
+Overall, relational databases are powerful and widely used, but they do have some limitations and drawbacks that need to be carefully considered when designing and implementing a database solution.
 
 
 
