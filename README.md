@@ -20,6 +20,8 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 16](#Day-16)
 - [Day 17](#Day-17)
 - [Day 18](#Day-18)
+- [Day 19](#Day-19)
+
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1713,6 +1715,108 @@ Although relational databases provide robust data integrity and consistency thro
 Overall, relational databases are powerful and widely used, but they do have some limitations and drawbacks that need to be carefully considered when designing and implementing a database solution.
 
 
+
+# Day 19
+
+## Anatomy of vulnerabilities, security controls to protect data  and security considerations while hosting models
+Today i learned the anatomy of vulnerabilities, some key components of the anatomy of vulnerabilities, security controls to protect data  as well as how security considerations change as we consider various hosting models such as  on-premise, infrastructure as a service(IaaS), platform as a service(PaaS), and software as a service(SaaS)
+
+### Anatomy Of Vulnerability
+
+The anatomy of vulnerability refers to the different aspects that make an individual or a system susceptible to harm, damage, or exploitation. Vulnerability can manifest in various forms, including physical, psychological, social, economic, and environmental vulnerability.
+
+Here are some key components of the anatomy of vulnerability:
+
+* Exposure: 
+The degree to which an individual or system is exposed to a potential risk or threat. For example, living in an area prone to natural disasters like floods, hurricanes, or earthquakes increases the exposure to physical harm.
+
+* Susceptibility: 
+The vulnerability of an individual or system to harm or damage based on their inherent characteristics or vulnerabilities. For example, someone with a weakened immune system is more susceptible to infections.
+
+* Resilience: 
+The ability of an individual or system to withstand and recover from a potential risk or threat. For example, having access to emergency services or support networks can increase an individual's resilience in the face of a disaster.
+
+* Access to resources:
+ The availability and accessibility of resources that can help mitigate or reduce the risk of harm or damage. For example, access to healthcare, education, and financial resources can help individuals and communities cope with vulnerabilities.
+
+* Social factors: 
+The role that social structures and institutions play in creating or exacerbating vulnerabilities. For example, systemic inequalities such as poverty, discrimination, and oppression can create and perpetuate vulnerabilities.
+
+* Environmental factors: 
+The impact of environmental factors such as climate change, natural disasters, pollution, and other environmental hazards on individual and community vulnerabilities.
+
+Understanding the anatomy of vulnerability is essential for identifying and addressing vulnerabilities at individual, community, and systemic levels. By addressing the underlying causes of vulnerability and building resilience, we can create a more equitable and just society.
+
+### Security controls needed to protect Data
+
+
+To protect data against both outside actors and internal actors, a comprehensive set of security controls is necessary. Here are some key security controls that organizations can implement to protect their data:
+
+1. Access controls:
+ Access controls limit access to data to authorized individuals or processes only. This includes measures such as passwords, multi-factor authentication, and role-based access control.
+
+2. Data encryption:
+ Data encryption converts plain text data into ciphertext, making it unreadable without the appropriate decryption key. Encryption can protect data both at rest and in transit.
+
+3. Monitoring and logging: 
+Monitoring and logging systems can detect and record suspicious activities and provide an audit trail for investigations. This includes intrusion detection systems, security information and event management (SIEM) systems, and network traffic analysis tools.
+
+4. Data backup and recovery:
+ Data backup and recovery measures ensure that data can be restored in the event of a security breach, disaster, or other data loss event. This includes regular backups and testing of backup and recovery systems.
+
+5. Employee training and awareness:
+ Employee training and awareness programs can help prevent accidental or intentional data breaches by educating employees on security best practices and policies.
+
+6. Physical security:
+ Physical security measures, such as access control systems, surveillance cameras, and secure storage facilities, can protect data from physical theft, damage, or destruction.
+
+7. Incident response plan:
+ An incident response plan outlines procedures for responding to security incidents, including how to contain the incident, notify stakeholders, and conduct a post-incident review.
+
+8. Regular security assessments: 
+Regular security assessments, such as vulnerability assessments and penetration testing, can identify vulnerabilities and weaknesses in an organization's security controls and help prioritize remediation efforts.
+
+Implementing a comprehensive set of security controls that covers access controls, data encryption, monitoring and logging, backup and recovery, employee training and awareness, physical security, incident response plans, and regular security assessments can help protect data against both outside actors and internal actors.
+
+
+### security considerations that changes as we consider various hosting models such as; on-premise, infrastructure as a service, platform as a service, and software as a service
+
+As you consider various hosting models, such as on-premise, infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS), the security considerations can change significantly. Here is how security considerations can vary across these hosting models:
+
+1. On-Premise:
+
+In an on-premise hosting model, the organization owns and manages its own IT infrastructure, including servers, storage devices, and networking equipment. Security considerations in this model include:
+
+* Physical security:
+ Protecting the physical infrastructure from theft, damage, or unauthorized access.
+* Access controls: 
+Implementing access controls to ensure that only authorized personnel have access to the infrastructure and data.
+* Patch management: 
+Ensuring that all hardware and software are up-to-date with the latest security patches and updates.
+* Disaster recovery and business continuity: 
+Implementing backup and recovery systems to ensure that data can be restored in the event of a security breach or disaster.
+
+2. Infrastructure as a Service (IaaS):
+
+In an IaaS hosting model, the organization outsources its IT infrastructure to a third-party provider, who is responsible for managing the underlying hardware and networking infrastructure. Security considerations in this model include:
+
+* Data encryption: 
+Encrypting data at rest and in transit to protect against data breaches.
+* Identity and access management:
+ Ensuring that only authorized personnel have access to the infrastructure and data through proper identity and access management controls.
+* Network security: 
+Protecting the network infrastructure from unauthorized access and attacks, including implementing firewalls and intrusion detection and prevention systems.
+* Compliance and audit controls: 
+Ensuring that the infrastructure meets compliance and audit requirements for the organization and the industry.
+
+
+3. Platform as a Service (PaaS): 
+In a PaaS model, the cloud provider offers a platform on which developers can build and deploy their applications. Security considerations in a PaaS model typically focus on securing the underlying platform and the infrastructure that supports it. This includes measures such as network security, encryption, access control, and application security. Additionally, since developers have more control over the applications and code in a PaaS model, they need to ensure that their applications are secure and that any vulnerabilities are addressed.
+
+4. Software as a Service (SaaS): 
+In a SaaS model, the cloud provider hosts and manages the application, and users access it via a web browser or application interface. In this model, the cloud provider is responsible for securing the infrastructure, platform, and application. However, users still need to take precautions to protect their data and accounts. For example, they may need to use strong passwords, enable multi-factor authentication, and ensure that their devices are secure.
+
+Overall, the security considerations in a PaaS model are more focused on the application layer, while in a SaaS model, the focus is on securing user accounts and data. Regardless of the hosting model, it's essential to implement strong security controls, such as access controls, encryption, monitoring, and incident response plans, to protect against external threats and internal actors. Additionally, it's important to regularly review and update security policies and procedures to stay up-to-date with evolving threats and vulnerabilities.
 
 
 
