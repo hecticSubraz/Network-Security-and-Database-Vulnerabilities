@@ -21,7 +21,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 17](#Day-17)
 - [Day 18](#Day-18)
 - [Day 19](#Day-19)
-
+- [Day 20](#Day-20)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1820,6 +1820,76 @@ Overall, the security considerations in a PaaS model are more focused on the app
 
 
 
+
+# Day 20
+
+## Data Monitoring and Logging key activities 
+Today I learned what is  data monitoring as well as different  methods of data monitoring.I also learned about logging and logging key activities including key generation, key retrival and key usage. In other hand I got the knowledge of  critical security measures for protecting sensitive data and ensuring the integrity of systems and applications such as monitoring data access, activities, logging, unique user identities, and privileged user access
+
+### Data monitoring
+Data monitoring refers to the ongoing process of collecting, analyzing, and evaluating data to ensure that it is accurate, complete, and consistent over time. This involves setting up systems and processes to track and review data metrics and performance indicators, and identifying any issues or anomalies that may arise. Data monitoring may be done manually or through automated tools and software, and it may be used in various contexts, such as business operations, scientific research, or public health surveillance. The goal of data monitoring is to identify any potential problems early on, so that they can be addressed and corrected quickly, and to ensure that the data remains reliable and useful for decision-making.
+
+### Methods of data monitoring
+There are several methods of data monitoring, which can be broadly categorized into following methods:
+
+* Manual data monitoring:
+ This method involves human intervention to review and analyze data. Manual data monitoring may include regular data reviews, data quality checks, and data audits. It may also involve the use of manual reports or spreadsheets to track data metrics and performance indicators.
+
+* Automated data monitoring: 
+This method involves using software and tools to automate the collection, analysis, and evaluation of data. Automated data monitoring may include the use of data analytics software, data visualization tools, or machine learning algorithms to identify patterns or anomalies in the data. It may also involve setting up alerts or notifications to flag potential issues or changes in the data.
+
+* Real-time data monitoring:
+ This method involves monitoring data in real-time, as it is generated. Real-time data monitoring may be done manually or through automated tools and software. This method is particularly useful in situations where immediate action needs to be taken based on the data, such as in financial trading or emergency response.
+
+ * Statistical monitoring: 
+ This involves using statistical methods to analyze data and identify any unusual patterns or outliers. This can help identify potential errors or data quality issues.
+
+* Dashboard monitoring: 
+This involves using dashboards or other visualizations to display data in an easy-to-understand format. This can help identify trends and patterns over time and highlight any potential issues.
+
+* Alert-based monitoring: 
+This involves setting up alerts or notifications to be triggered when certain data thresholds or performance indicators are reached. This can help ensure that issues are identified and addressed in a timely manner.
+
+* Auditing: 
+This involves reviewing data periodically to ensure that it meets certain standards or requirements, such as regulatory compliance or quality control. Auditing can be done manually or through automated methods, and it can help identify any problems or errors in the data
+
+Overall, the choice of monitoring method will depend on the specific context and the type of data being monitored. A combination of these methods may also be used to ensure that data is monitored effectively and efficiently.
+
+### Logging 
+Logging refers to the process of recording or capturing data related to the events and activities that occur in a system, application, or network. The data captured in logs may include details such as the date and time of an event, the type of event that occurred, the user or application involved in the event, and any relevant parameters or context associated with the event. Logs may be used for a variety of purposes, such as troubleshooting, auditing, security monitoring, and performance analysis. The data captured in logs can be analyzed and correlated to provide insights into system behavior, detect potential security threats, or identify areas for improvement. Logging can be done manually, but it is often automated through the use of software tools and systems designed to capture and manage log data.
+
+### Logging key Activities 
+ When it comes to key management, logging all key activities is a critical security measure to help detect and investigate any unauthorized or suspicious activity.
+
+ 1. Key generation:
+  When a new key is generated, it should be logged along with relevant metadata, such as the date, time, and purpose of the key. The log should also record the algorithm or method used to generate the key and any relevant parameters, such as key length or entropy source.
+
+2. Key retrieval: 
+When a key is retrieved from storage, the log should record who requested the key and for what purpose. It should also record the date, time, and any relevant information about the key retrieval process, such as the method used to retrieve the key and any access control measures that were applied.
+
+3. Key usage:
+ When a key is used to encrypt, decrypt, or sign data, the log should record the date, time, and purpose of the key usage, as well as the identity of the user or application that performed the action. The log should also record any relevant details about the data that was processed, such as the data type or size, and any relevant parameters or settings used in the encryption or decryption process.
+
+### Critical security measures for protecting sensitive data 
+
+Monitoring data access, activities, logging, unique user identities, and privileged user access are all critical security measures for protecting sensitive data and ensuring the integrity of systems and applications. Here is a brief overview of each of these areas:
+
+* Data access monitoring: 
+This involves monitoring who accesses sensitive data, when they access it, and from where. This can include tracking logins, file access, network traffic, and database queries. By monitoring data access, organizations can identify potential security threats and unauthorized access attempts.
+
+* Activity monitoring:
+ This involves monitoring user activities within a system or application, such as keystrokes, mouse movements, and application usage. By monitoring user activities, organizations can detect suspicious behavior or anomalies that may indicate a security breach.
+
+* Logging: 
+Logging involves capturing and recording data related to system events, such as logins, logouts, file changes, and system errors. Logs can be used to track system activity, troubleshoot problems, and identify security incidents.
+
+* Unique user identities:
+ This involves assigning unique user identities to each user or application that accesses a system or application. This allows organizations to track and monitor individual user activity, and to assign appropriate access controls based on user roles and permissions.
+
+* Privileged user access:
+ This involves monitoring and controlling access to privileged accounts, such as administrator or root-level access. By controlling and monitoring privileged access, organizations can prevent unauthorized changes to critical systems and data.
+
+Effective monitoring of these areas often involves the use of automated tools and software, such as intrusion detection systems, security information and event management (SIEM) systems, and user behavior analytics (UBA) tools. By monitoring data access, activities, logging, unique user identities, and privileged user access, organizations can better protect their sensitive data and systems, and quickly detect and respond to potential security threats.
 
  
 
