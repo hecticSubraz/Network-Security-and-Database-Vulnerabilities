@@ -22,6 +22,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 18](#Day-18)
 - [Day 19](#Day-19)
 - [Day 20](#Day-20)
+- [Day 21](#Day-21)
 
 # Day 1
 ## Introduction to TCP/IP 
@@ -1893,6 +1894,72 @@ Effective monitoring of these areas often involves the use of automated tools an
 
  
 
+# Day 21
+
+## Real-time policy voilation alerts
+
+Today I learned about the generation of real-time policy violation alerts while activities are being recorded and  customizing monitoring for real-time blocking of unacceptable user behavior, access patterns or geography
+
+
+### Real-time policy voilation alerts
+
+Real-time policy violation alerts are notifications that are generated automatically when a user's behavior or actions violate predefined policies or rules in real-time. These alerts typically involve the use of specialized software or tools that monitor and analyze user activity in real-time to detect potential security threats or policy violations.
+
+The purpose of real-time policy violation alerts is to provide timely and proactive detection of security incidents or policy violations, allowing security personnel or relevant parties to take prompt action to mitigate the risks and prevent further damage. By receiving alerts in real-time, organizations can quickly respond to security incidents and minimize their impact on their operations, reputation, and customer trust.
+
+### Generation of real-time policy violation alerts
+
+The generation of real-time policy violation alerts while activities are being recorded typically involves the use of specialized software or tools that monitor and analyze user activity in real-time.
+
+Here's a general overview of the process:
+
+* Activity recording: 
+First, user activity is recorded in some way, such as through logging or capturing data from network traffic.
+
+* Policy rules:
+ Next, policy rules are defined that outline what types of behavior or actions are allowed or prohibited. These policies might be based on regulatory requirements, company policies, or best practices.
+
+* Real-time monitoring: 
+As users perform activities, the software continuously monitors their behavior in real-time to detect any potential policy violations. This might involve analyzing data from network traffic, file access logs, or user activity logs.
+
+* Alert generation: 
+When a potential policy violation is detected, an alert is generated in real-time to notify security personnel or other relevant parties. This alert might include details about the violation, such as the user involved, the time and date of the incident, and the specific policy rule that was violated.
+
+* Response and remediation: 
+Once an alert is generated, security personnel can take appropriate action to investigate the incident and respond accordingly. This might involve disabling a user account, blocking network traffic, or taking other remediation steps to prevent further policy violations.
+
+Overall, the goal of real-time policy violation alerts is to help organizations identify and respond to potential security threats in a timely and effective manner. By monitoring user activity in real-time and generating alerts when policy violations occur, organizations can reduce the risk of data breaches, compliance violations, and other security incidents.
+
+### About Real-time blocking of unacceptable user
+
+Real-time blocking of unacceptable user behavior is a security mechanism that automatically prevents users from engaging in behavior that violates company policies, regulatory requirements, or best practices.
+
+This mechanism involves a system that monitors user activity in real-time and identifies behavior that is deemed unacceptable based on predefined rules or policies. When unacceptable behavior is detected, the system blocks it in real-time, preventing further damage or security risks.
+
+The purpose of real-time blocking of unacceptable user behavior is to provide proactive and immediate protection against security threats, compliance violations, or other negative consequences of unacceptable user behavior. By blocking unacceptable behavior in real-time, organizations can prevent the spread of malware, limit the exposure of sensitive information, or prevent users from engaging in actions that could cause damage to the organization.
+
+Overall, real-time blocking of unacceptable user behavior is an important component of a comprehensive security strategy that can help organizations minimize the impact of security incidents and protect their operations, reputation, and customer trust.
+
+### Customizing monitoring for real-time blocking of unacceptable user behavior
+
+Customizing monitoring for real-time blocking of unacceptable user behavior involves setting up a monitoring system that can identify and block unacceptable user behavior as it occurs. Here's an overview of the process:
+
+* Define unacceptable behavior:
+ First, the organization must define what types of user behavior are considered unacceptable. This might include actions that violate company policies, regulatory requirements, or best practices.
+
+* Create custom monitoring rules:
+ Next, custom monitoring rules are created to identify and block unacceptable behavior. These rules might be based on specific keywords, file names, IP addresses, or other indicators of unacceptable behavior.
+
+* Real-time monitoring:
+ Once the custom monitoring rules are defined, they are applied to the organization's monitoring system to identify and block unacceptable behavior in real-time. The monitoring system might include intrusion detection and prevention systems, data loss prevention tools, or other security technologies.
+
+* Block unacceptable behavior:
+ When unacceptable behavior is detected, the monitoring system blocks it in real-time to prevent further damage. This might involve blocking access to certain websites or applications, disabling user accounts, or preventing the transfer of sensitive data.
+
+* Review and refine monitoring rules:
+ Over time, the organization should review and refine its monitoring rules to ensure they remain effective in identifying and blocking unacceptable behavior. This might involve analyzing incident reports, reviewing monitoring logs, or conducting regular security assessments.
+
+Overall, customizing monitoring for real-time blocking of unacceptable user behavior is an important part of a comprehensive security strategy. By setting up a monitoring system that can identify and block unacceptable behavior in real-time, organizations can reduce the risk of data breaches, compliance violations, and other security incidents.
 
 
 
