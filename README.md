@@ -25,7 +25,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 21](#Day-21)
 - [Day 22](#Day-22)
 - [Day 23](#Day-23)
-
+- [Day 24](#Day-24)
 
 
 # Day 1
@@ -2160,6 +2160,106 @@ Some attributes, such as the timestamp and event type, are critical for monitori
 
 By carefully managing the granularity of event attributes, you can capture the necessary information to effectively monitor and troubleshoot your system or application without overloading your logging infrastructure with unnecessary detail.
 
+
+
+# Day 24
+
+Today I learned what is failed access in database and how does it occur in a system. Then I got the knowledge of failed access monitoring and learned the process to configure a system to monitor failed password and unauthorized access attempts. Then i learned what is Suspicious Access Events and some examples of it.
+
+I also learned to configure monitor attempts to select the list of users and passwords or unauthorized direct database access attempts and the use of non-standard tools
+
+
+## Failed Access
+Failed access refers to any unsuccessful attempt to gain access to a system, application, or data. Failed access can occur due to various reasons such as incorrect authentication credentials, insufficient access privileges, expired or locked out accounts, network issues, or malicious activity. Failed access attempts are often logged and monitored by security teams as they can be an indicator of potential security threats such as unauthorized access attempts, brute-force attacks, or attempts to exploit vulnerabilities in the access control mechanisms. By monitoring failed access attempts, organizations can proactively identify and respond to potential security threats and improve the overall security of their systems and data.
+
+### How do failed access occur
+
+Failed access can occur in various ways, depending on the specific system or application being used. Some common causes of failed access include:
+
+1. Incorrect authentication credentials: 
+Failed access can occur when a user enters incorrect authentication credentials, such as a username and password, or fails to provide the necessary authentication credentials altogether.
+
+2. Insufficient access privileges:
+ Failed access can occur when a user attempts to access a resource or data for which they do not have the necessary access privileges. This can happen when an administrator forgets to grant access to a user or when a user attempts to access a restricted area of the system.
+
+3. Expired or locked out accounts: 
+Failed access can occur when a user's account has expired or been locked out due to too many failed login attempts. This can happen when an organization enforces password policies that require users to change their passwords regularly or when an automated security system locks out an account after a certain number of failed login attempts.
+
+4. Network issues: 
+Failed access can occur due to network issues such as connectivity problems, firewall issues, or DNS errors.
+
+5. Malicious activity:
+ Failed access can also occur due to malicious activity, such as an attacker attempting to gain unauthorized access to a system or application, or a hacker attempting to exploit a vulnerability in the system's security controls.
+
+By understanding the common causes of failed access, organizations can take steps to prevent and monitor failed access attempts and protect their systems and data from potential security threats.
+
+## Failed Access monitoring
+
+Failed access monitoring refers to the process of monitoring attempts to access a resource or data that were unsuccessful, typically due to incorrect authentication credentials or insufficient access privileges. The purpose of failed access monitoring is to detect potential security threats, such as unauthorized access attempts, brute-force attacks, or attempts to exploit vulnerabilities in the access control mechanisms. By monitoring failed access attempts, security teams can proactively identify and respond to potential security threats, such as attempts to gain unauthorized access to sensitive data or systems. Failed access monitoring is a critical component of a comprehensive security strategy and is often implemented in combination with other security controls, such as access controls, firewalls, and intrusion detection systems.
+
+
+
+### Process to configure a system to monitor failed password and unauthorized access attempts
+
+
+To configure a system to monitor failed password and unauthorized access attempts, follow these steps:
+
+* Enable auditing:
+ Enable auditing on the system so that all login and access attempts are logged. This will help you to track failed login attempts and unauthorized access attempts.
+
+* Configure audit policy: 
+Configure the audit policy to log failed login attempts and unauthorized access attempts. You can do this by going to the Security Policy settings and configuring the "Audit Logon Events" and "Audit Object Access" policies.
+
+* Configure log retention: 
+Configure the system to retain audit logs for a specific period. This will ensure that you have access to historical audit data for forensic analysis and compliance purposes.
+
+* Use a security information and event management (SIEM) tool:
+ Use a SIEM tool to collect, aggregate, and analyze audit logs. SIEM tools can help you to identify patterns of failed login attempts and unauthorized access attempts, and alert you to potential security threats.
+
+* Implement two-factor authentication:
+ Implement two-factor authentication on the system to reduce the risk of unauthorized access. Two-factor authentication requires users to provide two forms of identification before accessing the system, such as a password and a security token.
+
+* Regularly review audit logs: 
+Regularly review audit logs to identify any suspicious activity. This will help you to detect and respond to potential security threats in a timely manner.
+
+By following these steps, you can configure a system to monitor failed password and unauthorized access attempts and improve the security of your system.
+
+
+## Suspicious Access Events
+Suspicious access events refer to any access attempts to a system, application, or data that are deemed unusual or out of the ordinary and may indicate a potential security threat. Examples of suspicious access events include:
+
+1. Multiple failed login attempts: Multiple failed login attempts from the same or different IP addresses may indicate a brute-force attack or an attempt to guess a user's password.
+
+2. Access attempts from unusual locations: Access attempts from IP addresses located in unusual geographic locations, or from countries where the organization does not have business operations, may indicate an attempt to bypass security controls or gain unauthorized access.
+
+3. Access attempts outside of normal business hours: Access attempts outside of normal business hours may indicate an attempt to gain unauthorized access outside of normal operating hours.
+
+4. Access attempts from unusual devices: Access attempts from unusual or unrecognized devices, such as a new computer or mobile device, may indicate an attempt to use stolen or compromised credentials to gain unauthorized access.
+
+5. Access attempts to sensitive data or systems: Access attempts to sensitive data or systems, especially those that are not typically accessed by the user, may indicate an attempt to steal or manipulate data or gain unauthorized access to critical systems.
+
+It is important to monitor and analyze suspicious access events to identify and respond to potential security threats. Organizations can use security information and event management (SIEM) tools and other security controls to monitor access events and alert security teams to potential threats
+
+### Configurations to monitor attempts to select the list of users and passwords, or unauthorized direct database access attempts, and the use of non-standard tools
+
+To monitor attempts to select the list of users and passwords, unauthorized direct database access attempts, and the use of non-standard tools, you can implement the following configurations:
+
+* Enable database auditing:
+ Enable auditing on the database so that all access attempts are logged. This will help you to track failed login attempts, attempts to access sensitive data, and unauthorized changes to the database structure.
+
+* Configure audit policy:
+ Configure the audit policy to log all access attempts, including attempts to select the list of users and passwords and unauthorized direct database access attempts. You can do this by configuring the "Audit Object Access" and "Audit Database Management" policies.
+
+* Monitor privileged user activity:
+ Monitor the activity of privileged users, such as database administrators, who have access to sensitive data and can make changes to the database structure. You can do this by implementing role-based access controls and monitoring privileged user activity through a database activity monitoring (DAM) tool.
+
+* Monitor SQL statements:
+ Monitor SQL statements to detect any attempts to select the list of users and passwords, unauthorized direct database access attempts, and the use of non-standard tools. You can do this by configuring the "Audit Object Access" policy to audit successful and failed attempts to run SQL statements.
+
+* Implement intrusion detection and prevention: 
+Implement intrusion detection and prevention systems (IDPS) to detect and prevent unauthorized access attempts and the use of non-standard tools. IDPS systems can monitor network traffic and database activity to detect any suspicious activity and alert security teams in real-time.
+
+By implementing these configurations, you can improve the monitoring of attempts to select the list of users and passwords, unauthorized direct database access attempts, and the use of non-standard tools, and detect potential security threats in a timely manner.
 
 
 
