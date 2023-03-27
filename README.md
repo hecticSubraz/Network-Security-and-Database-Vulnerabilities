@@ -26,6 +26,8 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 22](#Day-22)
 - [Day 23](#Day-23)
 - [Day 24](#Day-24)
+- [Day 25](#Day-25)
+
 
 
 # Day 1
@@ -2263,6 +2265,105 @@ By implementing these configurations, you can improve the monitoring of attempts
 
 
 
+# Day 25
+
+At the verge of my course Network security and Database vulnerabilities, today i was introduced to injection flaws as well as effect of injection flaws. Then i learned about Improper Input Sanitization with its preventive measures and  Improper Output Sanitization with its preventive measures also. I was also introduced to the types of Injection flaws and the preventive measures to be prevented from injection flaws respectively.
+
+
+
+## Injection Flaws
+An injection flaw is a vulnerability in that applications allow an attacker to relay malicious code through an application to another system. It allows hackers to inject client-side or server-side commands. These are the flaws through which hackers can take control of web applications. Depending on the type of vulnerability an attacker might inject SQL queries, javascript or os commands, and so on. 
+
+![Injection flaws](https://media.geeksforgeeks.org/wp-content/uploads/20220602150734/RitikImage.jpg)
+
+
+### Effects of Injection Flaws:
+* Allows an attacker to compromise the victim’s system.
+* Allows hackers to execute malicious codes.
+* Allows attackers to do attacks cross-site attackers request forgery (The website did not see that the request actually originated from hackers or by itself).
+* Allows hackers to compromise databases.
+* Arbitrary file upload vulnerability may result in compromise of the entire database.
+* Loss of confidentiality, integrity, and availability.
+
+
+###  Improper Input Sanitization:
+Improper input sanitization is a security vulnerability that occurs when an application fails to properly sanitize user input before processing it. This can allow an attacker to inject malicious code or content into the application, leading to a variety of security vulnerabilities such as SQL injection attacks or cross-site scripting (XSS) attacks.
+Hacker exploits the web application with malicious commands, codes or tokens, etc., and the web application passes and executes this data entered by the hacker without sanitizing. This allows hackers to gain access to the application.Let’s look at the example below,
+
+
+![Improper input sanitization](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-27%20194821.png)
+
+
+This is how hacker enters malicious code into the web application, we should always sanitize request before sending them to the server. 
+
+
+### Preventions from Improper Input Sanitization:
+To fix improper input sanitization, you should ensure that all user input is properly validated and sanitized before it is processed by the application. Here are some steps that you can follow:
+
+* Sanitize input after receiving it from the user. 
+* Use an appropriate server-side filter.
+* Input should be validated at both client and server sides.
+* Identify all the locations in your code where user input is accepted, including web forms, input fields, and any other user input sources.
+* Determine the appropriate method of sanitization for each input, based on the type of input and the requirements of the application. For example, input to be stored in a database should be sanitized using SQL injection prevention techniques.
+* Implement the appropriate sanitization technique for each input, ensuring that the user input is properly validated and sanitized before it is processed by the application.
+* Test the application thoroughly to ensure that the changes have been implemented correctly and that there are no further vulnerabilities related to improper input sanitization.
+
+In addition to proper input sanitization, you should also consider implementing other security measures such as access control and secure coding practices. Regular code reviews and security testing can also help to identify and mitigate any potential vulnerabilities in your application.
+
+Overall, fixing improper input sanitization is an important step in ensuring the security of your application and protecting it against attacks. By taking the time to properly validate and sanitize all user input, you can greatly reduce the risk of security vulnerabilities and help to ensure that your application is secure and reliable.
+
+
+ ### Improper Output Sanitization
+Improper output sanitization occurs when an application fails to properly sanitize user input before displaying it to the user. This can allow an attacker to inject malicious code or content into the output, leading to a variety of security vulnerabilities such as cross-site scripting (XSS) attacks.
+Hacker exploits the web application by injecting malicious commands, codes or tokens, etc. and the application injects this data without sanitization. This allows hackers to control HTTP/HTML responses.
+Let’s look at the example below:
+
+![Improper output sanitization](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-27%20194829.png)
+
+
+This allows hackers to analyze the requests and responses.
+
+### How to Fix Improper Output Sanitization:
+
+To fix improper output sanitization, you should ensure that all user input is properly validated and sanitized before it is displayed to the user. Here are some steps that you can follow:
+
+* Sanitize output before inserting it into HTML/HTTP response.
+* Encode all special characters.
+* Identify all the locations in your code where user input is displayed to the user, including HTML templates, JavaScript files, and any other output-generating code.
+* Review the code in these locations to identify any points where user input is being used without being sanitized.
+* Determine the appropriate method of sanitization for each location, based on the type of output and the requirements of the application. For example, HTML input should be sanitized using HTML encoding techniques to prevent XSS attacks.
+* Implement the appropriate sanitization technique at each location, ensuring that the user input is properly validated and sanitized before it is displayed to the user.
+* Test the application thoroughly to ensure that the changes have been implemented correctly and that there are no further vulnerabilities related to improper output sanitization
+
+By properly validating and sanitizing user input, you can prevent many common security vulnerabilities, including those related to improper output sanitization. Regular code reviews and security testing can also help to identify and mitigate any potential vulnerabilities in your application.
+
+### Types of Injection Attacks:
+1. SQL Injection
+2. OS command Injection
+3. Fuzzing
+4. Arbitrary File Upload Vulnerability
+5. HTML Injection
+6. Cross-Site Scripting
+
+### How to Prevent  Injection Flaws:
+To prevent injection flaws, you should follow these best practices:
+Use parameterized queries and prepared statements:
+
+1.  Parameterized queries and prepared statements are programming techniques that allow you to separate user input from the command or query logic, making it impossible for attackers to inject malicious code into the query or command. These techniques are widely considered to be the most effective way to prevent SQL injection attacks.
+
+2. Input validation and sanitization: 
+You should validate and sanitize all user input before processing it. Input validation is designed to ensure that the user input matches the expected format and meets the necessary requirements, such as length or content. Input sanitization should remove any characters or strings that are not necessary for the input and are known to be unsafe, such as escape characters or SQL keywords.
+
+3. Use parameter binding: 
+If parameterized queries or prepared statements are not available, you can use parameter binding to bind user input to variables, which can help to prevent SQL injection attacks. Parameter binding involves binding user input to variables, which are then used in the query or command.
+
+4. Least privilege access control: 
+Users should only have access to the features and data that they need to perform their tasks. This can help to prevent unauthorized access and limit the impact of any potential attacks.
+
+5. Regular security testing and code reviews:
+ Regular security testing and code reviews can help to identify and mitigate any potential vulnerabilities in your application. This can include automated testing tools, manual penetration testing, and code reviews by security experts.
+
+By following these best practices, you can greatly reduce the risk of injection flaws and other security vulnerabilities in your application. It's important to keep in mind that security is an ongoing process, and you should continually monitor your application for any potential vulnerabilities and take action to address them as necessary.
 
 
 
