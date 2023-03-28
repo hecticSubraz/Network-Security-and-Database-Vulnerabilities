@@ -2369,7 +2369,7 @@ By following these best practices, you can greatly reduce the risk of injection 
 
 # Day 26
 
-Today I learned what is OS comand injection or Command injection, how does it works and some examples of command injection attack. Then i learned about potential consequences of an OS command injection attack as well as some known command injection vulnerabilities. After that i learned the process of detection of OS command injection vulnerabilities  and the preventive measure of OS command injection vulnerabilities in web application.
+Today I learned what is OS command injection or Command injection, how does it works and some examples of command injection attack. Then i learned about potential consequences of an OS command injection attack as well as some known command injection vulnerabilities. After that i learned the process of detection of OS command injection vulnerabilities  and the preventive measure of OS command injection vulnerabilities in web application.
 
 
 ## OS command injection (Command Injection):
