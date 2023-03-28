@@ -27,6 +27,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 23](#Day-23)
 - [Day 24](#Day-24)
 - [Day 25](#Day-25)
+- [Day 26](#Day-26)
 
 
 
@@ -2366,5 +2367,150 @@ Users should only have access to the features and data that they need to perform
 By following these best practices, you can greatly reduce the risk of injection flaws and other security vulnerabilities in your application. It's important to keep in mind that security is an ongoing process, and you should continually monitor your application for any potential vulnerabilities and take action to address them as necessary.
 
 
+# Day 26
+
+Today I learned what is OS comand injection or Command injection, how does it works and some examples of command injection attack. Then i learned about potential consequences of an OS command injection attack as well as some known command injection vulnerabilities. After that i learned the process of detection of OS command injection vulnerabilities  and the preventive measure of OS command injection vulnerabilities in web application.
+
+
+## OS command injection (Command Injection):
+
+OS command injection (also known as shell injection) is a web security vulnerability that allows an attacker to execute arbitrary operating system (OS) commands on the server that is running an application, and typically fully compromise the application and all its data.
+
+OS command injection is a vulnerability that lets a malicious hacker trick an application into executing operating system (OS) commands. OS command injection is also known as command injection or shell injection.
+
+### Working process of OS command injection:
+
+
+Most programming languages include functions that let the developer call operating system commands. The reasons for calling operating system commands are varied, for example, to include functionality that is not available in that programming language by default, to call scripts written in other languages, and more.
+
+OS command injection vulnerabilities are a result of using such operating system call functions with insufficient input validation. A lack of validation enables the attacker to inject malicious commands into user input and then execute them on the host operating system.
+
+Command injection vulnerabilities are an appsec problem that may appear in any type of computer software, in almost every programming language, and on any platform. For example, you can get command injection vulnerabilities in embedded software in routers, web applications and APIs written in PHP, server-side scripts written in Python, mobile applications written in Java, and even in core operating system software.
+
+The term OS command injection is defined in CWE-78 as improper neutralization of special elements used in an OS command. OWASP prefers the simpler term command injection. The term shell injection is used very rarely. Some OS command injection vulnerabilities are classified as blind or out-of-band. This means that the OS command injection attack does not result in anything being sent back or displayed immediately, and the result of the attack is, for example, sent to a server controlled by the attacker.
+
+Note that OS command injection is often confused with remote code execution (RCE), also known as code injection. In the case of RCE, the attacker executes malicious code in the language of the application and within the application context. In the case of OS command injection, the attacker executes a malicious command in a system shell. However, some sources consider OS command injection to be a type of code injection.
+
+
+### Example of a command injection attack
+
+Below is a simple example of PHP source code with an OS command injection vulnerability and a command injection attack vector on applications that include this code.
+
+#### Vulnerable code
+The developer of a PHP application wants the user to be able to see the output of the Windows ping command in the web application. The user needs to input the IP address and the application sends ICMP pings to that address. The developer passes the IP address using an HTTP GET parameter and then uses it in the command line. Unfortunately, the developer trusts the user too much and does not perform input validation.
+
+
+![vulnerable code](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-28%20151331.png)
+
+
+
+
+### The attack vector
+The attacker abuses this script by manipulating the GET request with the following payload:
+
+http://example.com/ping.php?address=8.8.8.8%26dir
+
+
+The shell_exec function executes the following OS command:
+ ping -n 3 8.8.8.8&dir. The & symbol in Windows separates OS commands. As a result, the vulnerable application executes an additional command (dir) and displays the command output (directory listing):
+
+
+![Directory listing](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-28%20151515.png)
+
+
+
+ ### Potential consequences of an OS command injection attack
+
+ In the case of OS command injection vulnerabilities, the attacker is able to execute operating system commands with the privileges of the vulnerable application. This lets the attacker, for example, install a reverse shell and obtain cmd access with such privileges. They may then be able to escalate the attack by using other exploits, which may ultimately lead to obtaining root access and, as a result, complete control of the web server operating system.
+
+If successful, the attacker may follow up with one of the following common types of attacks:
+
+* Ransomware or other malware: 
+The attacker may install a ransomware agent on the machine, which will then use other methods to spread to other assets owned by the victim.
+
+* Cryptocurrency mining:
+ Attackers often install cryptocurrency miners on compromised machines, which consume your runtime resources and provide funding for more malicious activities.
+
+* Sensitive data theft: 
+The attacker may use privilege escalation to access SQL database servers with sensitive user data such as credit card numbers or alternatively obtain credentials from local configuration and application files.
+
+### Examples of known OS command injection vulnerabilities
+
+1. CVE-2021-21315 in the System Information Library for Node.js (npm package systeminformation, versions before 5.3.1). If you used some functions from this library without input sanitization, an attacker would be able to execute operating system commands using your web application.
+
+2. CVE-2016-3714 (ImageTragick) in ImageMagick (versions before 7.0.1-1), which is a popular image manipulation package used by many image processing plugins, such as imagick in PHP, rmagick and paperclip in Ruby, and imagemagick in Node.js. The vulnerability allowed remote attackers to execute arbitrary code via shell metacharacters in a crafted image.
+
+3. CVE-2014-6271 (Shellshock) in the Linux operating system bash command (GNU Bash version 4.3 or lower). If a bash script used unsanitized user input in OS variables, an attacker would be able to inject OS commands that would be executed while the script was assigning the OS variable.
+
+### Process of detection of  OS command injection vulnerabilities
+
+The best way to detect OS command injection vulnerabilities depends on whether they are already known or unknown.
+
+If you only use commercial or open-source software and do not develop software of your own, you may find it enough to identify the exact version of the system or application that you are using. 
+
+* If the identified version is vulnerable to OS command injection, you can assume that you are susceptible to that OS command injection vulnerability. You can identify the version manually or use a suitable security tool, such as software composition analysis (SCA) software in the case of web applications or a network scanner in the case of networked systems and applications.
+
+* If you develop your own software or want to potentially find unknown OS command injection vulnerabilities (zero-days) in known applications, you must be able to successfully exploit the OS command injection vulnerability to be certain that it exists. In such cases, you need to either perform manual penetration testing with the help of security researchers or penetration testers or use a security testing tool that can automatically exploit vulnerabilities (which is possible for web security testing only). Examples of such tools are Invicti and Acunetix by Invicti. We recommend using this method even for known vulnerabilities.
+
+### How to prevent OS command injection vulnerabilities in web applications?
+
+There are several methods to improve application security by preventing OS command injection attacks. The simplest and safest one is never to use calls such as shell_exec in PHP to execute host operating system commands. Instead, you should use the equivalent commands from the programming language. For example, if a developer wants to send mail using PHP on Linux/UNIX, they may be tempted to use the mail command available in the operating system. Instead, they should use the mail() function in PHP.
+
+The web server administrator may enforce this by disabling potentially dangerous functions, such as the ones causing operating system calls. For example, in the case of PHP, you can configure the php.ini file to block dangerous commands by adding the following line:
+
+#### disable_functions=exec,passthru,shell_exec,system
+
+
+1. Using input sanitization to prevent command injection:
+
+The above approach may be difficult if there is no equivalent command in the programming language. For example, there is no direct way to send ICMP ping packets from PHP. In such cases, you need to apply input sanitization before you pass the value to a shell command and the safest way is to use a whitelist. For example, in the vulnerable code presented above, you could check if the address variable is an IP address. The result would be the following corrected code:
+
+
+![Input sanitization](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-28%20152120.png)
+
+
+When sanitizing, remember that dangerous user input can come from lots of places, not only from GET and POST parameters. It can also appear in HTTP headers, JSON or XML data, and any other part of an HTTP request.
+
+
+2. Using character escaping to prevent command injection:
+
+In some languages, you can use character escaping to prevent command injection attacks. This means that before you send user input to the OS command, the built-in programming language function makes sure that all potentially dangerous characters are escaped.
+
+For example, in PHP, you could use escapeshellarg and escapeshellcmd functions. The result would be the following safe code:
+
+
+![Character escaping](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-28%20152324.png)
+
+
+
+3. Using blacklists to prevent command injection:
+
+
+We do not recommend using blacklists because attackers have many ways of bypassing them. However, if you do decide to use a blacklist, you must be aware that the attacker can use a variety of special characters to inject an arbitrary command. The simplest and most common ones are the semicolon (;) for Linux and the ampersand (&) for Windows. However, the following payloads for the vulnerable code presented above will all work and display the result of the whoami command:
+
+* address=8.8.8.8%3Bwhoami (; character, Linux only)
+* address=8.8.8.8&26whoami (& character, Windows only)
+* address=8.8.8.8%7Cwhoami (| character)
+* address=invalid%7C%7Cwhoami (|| characters, the second command is executed only if the first command fails)
+* address=8.8.8.8&26&26whoami (&& characters)
+* %3E(whoami) (> character, Linux only)
+* %60whoami%60 (` character, Linux only, the result will be reported by the ping command as an error)
+
+Therefore, if you absolutely need to use blacklisting, you must filter or escape the following special characters:
+
+* Windows: ( ) < > & * ‘ | = ? ; [ ] ^ ~ ! . ” % @ / \ : + , `
+* Linux: { } ( ) < > & * ‘ | = ? ; [ ] $ – # ~ ! . ” % / \ : + , `
+
+
+### How to mitigate OS command injection attacks?
+
+Methods to mitigate OS command injection attacks will differ depending on the type of software:
+
+* In the case of custom software, such as web applications, the only way to permanently mitigate an OS command injection vulnerability is to eliminate operating system call functions from the application code, block them on the server level or, if not possible, use whitelist-based sanitization for user input that is used in operating system call functions.
+
+* In the case of known OS command injections in third-party software, you must check the latest security advisories for a fix and update to a non-vulnerable version.
+
+
+In the case of zero-day OS command injections in third-party software, you can apply temporary WAF (web application firewall) rules for mitigation. However, this only makes the OS command injection harder to exploit and does not eliminate the problem.
 
 
