@@ -30,7 +30,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 26](#Day-26)
 - [Day 27](#Day-27)
 - [Day 28](#Day-28)
-
+- [Day 29](#Day-29)
 
 
 
@@ -2781,5 +2781,113 @@ The best way to prevent NoSQL injection attacks is to avoid using raw user input
 
 If you do need to use JavaScript for your queries, carefully validate and encode all user inputs, enforce least-privilege rules, and ensure you use secure coding practices in the relevant programming language to avoid using vulnerable constructs.
 
+
+
+
+# Day 29
+
+Today I learned about XPath injection as well as the working process of XPath injection with some example and its preventive measures. Then I learned about LDAP injection which is also known as Lightweight Directory Access Protocol injection, its working process and its preventive measures.
+
+## XPath injection
+XPath injection is a type of injection attack that targets applications that use XPath (XML Path Language) to query XML documents. XPath is a language used to select elements and attributes in an XML document, and it is often used by web applications to extract data from XML-based data sources.
+
+XPath injection attacks occur when an attacker is able to inject malicious XPath code into an application's XPath query. The attacker can use this vulnerability to extract sensitive information from the XML document, modify the document, or even execute arbitrary code on the server.
+
+## Working of Xpath injection:
+
+XPath injection works by taking advantage of vulnerabilities in the application's use of XPath. Like other injection attacks, an attacker can inject malicious code into the application, in this case, an XPath query. This is typically accomplished by entering specially crafted input into the application's user interface, such as a web form or search field.
+
+Once the attacker's input is submitted, the application constructs an XPath query based on the user's input, which is then executed on the server. If the application fails to properly validate and sanitize the user's input, the attacker can inject their own XPath code into the query. This can allow the attacker to manipulate the XPath query to extract sensitive data or perform other malicious actions, such as modifying or deleting data.
+
+For example, consider an application that allows users to search for products in an XML database using an XPath query. The application constructs the XPath query based on the user's search input. If the application fails to properly validate the user's input, an attacker could inject a malicious XPath query that retrieves all product information, rather than just the products that match the user's search criteria. This would allow the attacker to extract sensitive data, such as customer information or pricing data.
+
+
+
+Example :
+
+Suppose there is a web application that allows users to search for products in an XML database using an XPath query. The application constructs the XPath query based on the user's search input.
+
+The original XPath query might look something like this:
+
+![Xpath](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-31%20161712.png)
+
+
+In this query, the user's input is used to select a specific product by name, and retrieve its description.
+
+Now, suppose an attacker enters the following input into the search field:
+
+![xpath](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-31%20161720.png)
+
+
+The application constructs the following XPath query based on the attacker's input:
+
+![xpath](https://raw.githubusercontent.com/hecticSubraz/Network-Security-and-Database-Vulnerabilities/main/file%20dumps/Screenshot%202023-03-31%20161725.png)
+
+In this modified query, the attacker has injected additional code that will always evaluate to true. This will cause the query to retrieve the description of all products in the database, rather than just the product specified by the user's input.
+
+This type of XPath injection attack can be used to extract sensitive information, such as customer data or pricing information, or to perform other malicious actions, such as modifying or deleting data in the database. To prevent such attacks, it is important to properly validate and sanitize user input, and to use parameterized XPath queries that separate user input from the query.
+
+
+### preventive measure of Xpath injection:
+
+Here are some preventive measures that can be taken to protect against XPath injection attacks:
+
+* Input validation and sanitization:
+ It is important to validate and sanitize all user input before it is used in an XPath query. This can include filtering out any characters or expressions that could be used for injection attacks.
+
+* Parameterized XPath queries: 
+Parameterized XPath queries can help protect against XPath injection attacks by separating user input from the XPath query itself. This means that the user input is treated as a parameter rather than being directly concatenated into the query.
+
+* Limited access to XML data: 
+Access to the XML data source should be limited to only authorized users, and permissions should be set up to restrict access to specific parts of the data.
+
+* Monitor application activity:
+ Monitoring application activity can help detect and respond to any suspicious behavior or activity, including attempts at XPath injection attacks.
+
+* Keep software up-to-date: 
+Keep software and libraries used in the application up-to-date to ensure that any known vulnerabilities are patched.
+
+* Use secure coding practices: 
+Use secure coding practices, such as following secure coding guidelines, to prevent the introduction of vulnerabilities into the application's code.
+
+By implementing these preventive measures, an application can significantly reduce the risk of XPath injection attacks and other types of injection attacks.
+
+
+##  Lightweight Directory Access Protocol(LDAP) Injection:
+
+LDAP injection is a type of injection attack that targets web applications that use Lightweight Directory Access Protocol (LDAP) for authentication and authorization purposes. LDAP is a protocol used to access and manage directory services, such as Microsoft Active Directory, which stores information about users, groups, and other resources in a network.
+
+LDAP injection attacks occur when an attacker is able to inject malicious LDAP code into an application's LDAP query. The attacker can use this vulnerability to extract sensitive information, such as usernames and passwords, modify the directory, or even execute arbitrary code on the server.
+
+### Working of process of LDAP injection:
+
+LDAP injection attacks work by taking advantage of vulnerabilities in an application's use of LDAP for authentication and authorization purposes. The attack is similar to other injection attacks, such as SQL injection and XPath injection, in that it involves the injection of malicious code into an application.
+
+The attacker typically injects malicious code into an LDAP query by submitting specially crafted input to the application, such as a login form. The application then constructs an LDAP query based on the user's input, which is then executed on the server.
+
+If the application fails to properly validate and sanitize the user's input, the attacker can inject their own LDAP code into the query. This can allow the attacker to manipulate the LDAP query to extract sensitive data or perform other malicious actions, such as modifying or deleting data in the directory.
+
+For example, consider an application that uses LDAP to authenticate user login credentials. The application constructs an LDAP query to check if the user's provided username and password match a user in the directory. If the application fails to properly sanitize the user's input, an attacker could inject a malicious LDAP query that always evaluates to true, bypassing the authentication check and allowing the attacker to gain unauthorized access to the application.
+
+
+### Preventive measure of LDAP injection:
+
+Here are some preventive measures that can be taken to protect against LDAP injection attacks:
+
+Input validation and sanitization: It is important to validate and sanitize all user input before it is used in an LDAP query. This can include filtering out any characters or expressions that could be used for injection attacks.
+
+Parameterized LDAP queries: Parameterized LDAP queries can help protect against LDAP injection attacks by separating user input from the LDAP query itself. This means that the user input is treated as a parameter rather than being directly concatenated into the query.
+
+Least privilege access: Ensure that users and applications only have the access they need to perform their required functions. Avoid granting unnecessary privileges to users, and ensure that applications can only access the portions of the directory that they require.
+
+Limit access to LDAP data: Access to the LDAP directory should be limited to only authorized users, and permissions should be set up to restrict access to specific parts of the directory.
+
+Monitor application activity: Monitoring application activity can help detect and respond to any suspicious behavior or activity, including attempts at LDAP injection attacks.
+
+Keep software up-to-date: Keep software and libraries used in the application up-to-date to ensure that any known vulnerabilities are patched.
+
+Use secure coding practices: Use secure coding practices, such as following secure coding guidelines, to prevent the introduction of vulnerabilities into the application's code.
+
+By implementing these preventive measures, an application can significantly reduce the risk of LDAP injection attacks and other types of injection attacks.
 
 
